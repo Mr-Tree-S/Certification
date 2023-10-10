@@ -2,6 +2,6 @@
 
 [CISSP](CISSP.md)
 
-[CISA](CISA.md)
+[CISM](CISM.md)
 
-[IELTS](IELTS.md)
+[CISA](CISA.md)
