@@ -1,4 +1,4 @@
-# CISM Tips
+# CISM
 
 ## Study Approach
 

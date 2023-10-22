@@ -1,4 +1,4 @@
-# CISSP Tips
+# CISSP
 
 ## Study Approach
 

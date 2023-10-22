@@ -1,4 +1,4 @@
-# CISA Tips
+# CISA
 
 ## Study Approach
 

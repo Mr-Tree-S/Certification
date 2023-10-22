@@ -1,4 +1,4 @@
-# Cortex Tips
+# Cortex
 
 ## Study Approach
 
@@ -52,7 +52,7 @@ Which two items are stitched to the Cortex XDR causality chain? (Choose two.)
 - c. security and information event management (SIEM)
 - d. full uniform resource locator (URL)
 
-#### 12 X
+#### 12
 
 What is the result of creating an exception from an exploit security event?
 
@@ -60,19 +60,6 @@ What is the result of creating an exception from an exploit security event?
 - b. User is exempt from generating events for 24 hours
 - c. Process from WildFire analysis is whitelisted
 - d. Administrators are exempt from generating alerts for 24 hours
-
-```text
-当从利用安全事件中创建异常规则时，不同选项表示的结果如下：
-a. Triggered exploit protection module (EPM) for the host and process involved is disabled
-此选项描述的结果是，与安全事件相关的主机和进程上的利用保护模块（EPM）被禁用。这意味着系统不再尝试保护该主机和进程免受利用攻击的威胁，这可能会降低安全性。
-b. User is exempt from generating events for 24 hours
-此选项表示，用户在接下来的24小时内不会生成与该事件相关的事件。这意味着系统将不再生成与用户相关的安全事件，不会报告相关问题。
-c. Process from WildFire analysis is whitelisted
-这是正确答案。该选项表示，与利用事件相关的进程将被列入白名单，不再受到WildFire分析的监测。这意味着该进程被视为安全或受信任，不再会被视为潜在的威胁。
-d. Administrators are exempt from generating alerts for 24 hours
-此选项表示，管理员在接下来的24小时内将不再生成与该事件相关的警报。这意味着管理员不会再收到与该事件相关的警报通知，从而降低了通知的频率。
-总之，选项c描述的结果是在创建异常规则后，与安全事件相关的进程将被列入白名单，不再受到WildFire分析的监测。其他选项描述了不同的可能结果，但在这个特定问题中，正确答案是选择c。
-```
 
 #### 15
 
@@ -93,16 +80,17 @@ Which process is the causality chain does the Cortex XDR agent identify as trigg
 - d. Relevant shell
 
 ```text
-这个问题询问的是，在Cortex XDR代理中，触发事件序列的因果链中的哪个进程被标识为触发事件序列的起始点。让我为每个选项进行详细分析：
-a. Adversary’s remote process (对手的远程进程)：
-此选项指的是事件序列中的攻击者远程进程。虽然攻击者的远程进程可能在事件中扮演了重要角色，但它通常不被标识为触发事件序列的起始点。起始点通常是在系统内部的进程，而不是来自攻击者的远程进程。
-b. Chain’s alert initiator (链的警报发起者)：
-这是正确答案。这个选项指的是事件链中触发事件序列的进程，也就是事件的起始点。Cortex XDR代理通常会标识并记录触发事件链的进程，以帮助分析和响应安全事件。
-c. Causality group owner (因果关系组的所有者)：
-"Causality group owner" 通常不是事件链中的进程，而是与事件链相关的因果关系组的所有者或管理者。这个选项不是指事件的起始点。
-d. Relevant shell (相关的Shell)：
-"Relevant shell" 通常指的是与事件相关的命令行Shell进程，可能与事件链中的某些进程交互。它不一定是事件链的触发点，通常是事件中的一个组成部分。
-综上所述，正确答案是选项b，即"Chain’s alert initiator"，它表示事件链中触发事件序列的进程，也就是事件的起始点。
+Chain’s alert initiator (链的警报启动器)：
+这个选项指的是在一系列事件中，最初触发警报的那个事件或进程。简单地说，就是事件链的开始。
+如果你把事件链想象成一个连锁反应，那么“Chain’s alert initiator”就是这一连锁反应的第一个环节。
+在故障排查或安全事件响应中，知道哪个事件最先触发可以帮助分析人员更快地找到问题的根源。
+
+Causality group owner (因果关系组的所有者)：
+这个选项可能意味着在一个有因果关系的事件组中，有一个“主要”的或“中心”的事件或进程。这个“所有者”进程可能与其他事件有直接或间接的关系。
+但是，此选项并不明确指出这个“所有者”是事件链的起点。它更像是描述了这个进程在事件组中的中心地位，但不一定是第一个触发的。
+在某些情况下，知道因果关系组的所有者可以帮助分析人员确定哪个进程是最关键的，但这并不等同于知道哪个进程首先触发了警报。
+
+从描述来看，Chain’s alert initiator 更可能是 Cortex XDR agent 识别的触发事件序列的进程，因为它明确指出了该进程是警报的起始点。而 Causality group owner 描述的是一个进程在事件组中的重要性或中心地位，但没有明确说明它是触发事件的起点。
 ```
 
 #### 18
@@ -417,7 +405,7 @@ How do sub-playbooks affect the incident Context Data?
 - c. When set to global, parallel task execution is allowed
 - d. When set to private, task outputs are automatically written to the root context
 
-#### 22 X
+#### 22
 
 Which statement applies to a Cortex XSOAR engine that is part of a load-balancing group?
 
@@ -701,6 +689,4 @@ Which command-line interface (CLI) query would retrieve the last three Splunk ev
 
 ## 考前忠告
 
-1. 太绝对的词大概率错误的，例如**must**
-   - 相对中性的词，或许是个合适的选项，例如**can**
-2. 安全不关注性能，效率一类的词，甚至在 Web 安全中，可用性也处于三性中的最低地位
+1. 太绝对的词大概率错误的，例如**must/only**
