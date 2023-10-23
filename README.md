@@ -1,7 +1,7 @@
 # Certification Note
 
-[CISSP](CISSP.md)
+[CISSP](./ISC2/CISSP.md)
 
-[CISM](CISM.md)
+[CISM](./ISACA/CISM.md)
 
-[CISA](CISA.md)
+[CISA](./ISACA/CISA.md)
