@@ -59,15 +59,6 @@ d. Heuristic analysis (启发式分析)：
 综上所述，Cortex XDR代理在进行预定扫描时最可能使用的两种方法是：a. WildFire哈希比较 和 b. 签名比较。
 ```
 
-#### 32 X
-
-Which two areas of Cortex XDR are used for threat hunting activities? (Choose two)
-
-- a. Host insights module
-- b. Indicators of compromise (IOC) rules
-- c. Live terminal
-- d. Query builder
-
 #### 47 X
 
 Which type of log is ingested natively in Cortex XDR Pro per TB?
@@ -76,15 +67,6 @@ Which type of log is ingested natively in Cortex XDR Pro per TB?
 - b. Microsoft Office 365
 - c. Demisto
 - d. Google Kubernetes Engine
-
-#### 49 X
-
-What are two reasons incident investigation is needed in Cortex XDR? (Choose two)
-
-- a. Insider Threats may not be blocked and initial activity may go undetected
-- b. Detailed reports are needed for senior management to justify the cost of XDR
-- c. No solution will stop every attack requiring further investigation of activity
-- d. Analyst need to acquire forensic artifacts of malware that has been blocked by the XDR agent
 
 ### XSOAR
 
@@ -154,15 +136,6 @@ Which two playbook functionalities allow looping through a group of tasks during
 - b. Playbook functions
 - c. CommonPolling Playbooks
 - d. Playbook tasks
-
-#### 44 X
-
-Which playbook feature allows concurrent execution of tasks?
-
-- a. Automation tasks
-- b. Parallel tasks
-- c. Manual tasks
-- d. Conditional tasks
 
 ## 考前忠告
 
