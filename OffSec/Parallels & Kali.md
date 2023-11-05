@@ -1,6 +1,0 @@
-# Parallels & Kali
-
-## Parallel
-
-## Kali
-

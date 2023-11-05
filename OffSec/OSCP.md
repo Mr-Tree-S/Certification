@@ -1,6 +1,14 @@
 # OSCP
 
-## 1
+## Kali Linux
+
+### Parallels & Kali
+
+Kali Linux 2023.2 ARM64
+
+---
+
+## Information Gathering
 
 ---
 
