@@ -1,18 +1,5 @@
 # CISSP
 
-## Study Approach
-
-1. 根据本章小结、考试要点阅读章节内容，然后书面实验、复习题
-2. 对应域的练习题来一遍，对应错题再回归书本
-3. 边执行上面两步边总结文档
-4. 所有域全部过完，模拟题全部过一遍，然后根据自己时间做**开源题**
-   - <https://www.briefmenow.org/isc2/>
-   - <https://www.exam-answer.com/isc>
-   - <https://www.examtopics.com/exams/isc/cissp/>
-   - <https://vceguide.com/isc-certification/>
-
----
-
 ## **Domain 1: Security and Risk Management (1/2/3/4)**
 
 ### Chapter 1 Security Governance Through Principles and Policies
@@ -300,7 +287,7 @@
 
 ---
 
-## 考前忠告
+## Tips
 
 1. 一定要仔细读题目的**最后几个字，把它圈出来**:
    - 问的是目标就只找答案跟目标有关；
