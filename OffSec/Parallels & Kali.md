@@ -1,4 +1,4 @@
-# Parallel & Kali
+# Parallels & Kali
 
 ## Parallel
 
