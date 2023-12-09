@@ -1,4 +1,4 @@
-# Cortex
+# PSE-Cortex
 
 ## Study Approach
 
