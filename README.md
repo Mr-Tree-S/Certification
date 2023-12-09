@@ -1,4 +1,4 @@
-# Certification Note
+# Certification Notes
 
 [CISSP](./ISC2/CISSP.md)
 
