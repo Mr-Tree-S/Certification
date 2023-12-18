@@ -153,7 +153,8 @@ Which of the following represents the correct relation of alerts to incidents?
 - D. Every alert creates a new Incident.
 
 ```text
-Alerts on the same causality chain are grouped with the same incident if an open incident already exists. Otherwise, the new incoming alert will create a new incident.
+Alerts on the same causality chain are grouped with the same incident if an open incident already exists.
+Otherwise, the new incoming alert will create a new incident.
 https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Prevent-Administrator-Guide/Investigate-Incidents
 ```
 
