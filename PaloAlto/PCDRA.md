@@ -170,7 +170,8 @@ Which of the following protection modules is checked first in the Cortex XDR Win
 ```text
 Correct Answer - D. Child Process Protection
 https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Prevent-Administrator-Guide/File-Analysis-and-Protection-Flow
-If the process tries to launch any child processes, the Cortex XDR agent first evaluates the child process protection policy. If the parent process is a known targeted process that attempts to launch a restricted child process, the Cortex XDR agent blocks the child processes from running and reports the security event to Cortex XDR.
+If the process tries to launch any child processes, the Cortex XDR agent first evaluates the child process protection policy.
+If the parent process is a known targeted process that attempts to launch a restricted child process, the Cortex XDR agent blocks the child processes from running and reports the security event to Cortex XDR.
 ```
 
 #### 50 X
