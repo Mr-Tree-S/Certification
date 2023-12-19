@@ -140,4 +140,4 @@ Which two playbook functionalities allow looping through a group of tasks during
 ## 考前忠告
 
 1. 太绝对的词大概率错误的，例如**must/only**
-2. 选跟题干关键词相关度较高的
+2. 选跟题干**关键词**相关度高的
