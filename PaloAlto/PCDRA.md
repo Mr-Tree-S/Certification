@@ -230,7 +230,7 @@ Which of the following paths will successfully activate Remediation Suggestions?
 
 ```text
 This should be - B. Incidents > click the 3 dots > Remediation Suggestions
-C is wrong because Actions > Live Terminal
+C is wrong because Causality View > Actions > Live Terminal
 ```
 
 #### 65 X
@@ -289,4 +289,4 @@ https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Pro-Administrat
 ## 考前忠告
 
 1. 太绝对的词大概率错误的，例如**must/only**
-2. 选跟题干关键词相关度较高的
+2. 选跟题干**关键词**相关度高的
