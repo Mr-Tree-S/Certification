@@ -60,7 +60,10 @@ event_sub_type = PROCESS_START and
 action_process_image_name ~= ".*?\.(?:pdf|docx)\.exe"
 ```
 
-```Correct answer is: B    "The XQL query must at a minimum filter on the event_type field in order for it to be a valid BIOC rule."```
+```t
+Correct answer is: B
+"The XQL query must at a minimum filter on the event_type field in order for it to be a valid BIOC rule."
+```
 
 #### 3 X
 
