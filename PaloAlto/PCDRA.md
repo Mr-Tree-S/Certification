@@ -6,11 +6,96 @@
 
 ---
 
-## **PCDRA Study Guide**
-
 ## **RUSH**
 
 ### XDR
+
+#### 1
+
+Phishing belongs which of the following MITRE ATT&CK tactics?
+A. Initial Access, Persistence
+B. Persistence, Command and Control
+C. Reconnaissance, Persistence
+D. Reconnaissance, Initial Access
+
+```D```
+
+#### 2
+
+When creating a BIOC rule, which XQL query can be used?
+A.
+
+```XQL
+dataset = xdr
+_
+data
+| filter event
+_sub
+_
+type = PROCESS_START and
+action
+_
+process_image_
+name ~= ".*?\.(?:pdf|docx)\.exe"
+```
+
+B.
+
+```XQL
+dataset = xdr
+_
+data
+| filter event
+_
+type = PROCESS and
+event
+_sub
+_
+type = PROCESS_START and
+action
+_
+process_image_
+name ~= "._?\.(?:pdf|docx)\.exe"
+```
+
+C.
+
+```XQL
+dataset = xdr
+_
+data
+| filter action
+_
+process_image_
+name ~= "._?\.(?:pdf|docx)\.exe"
+| fields action
+_
+process_image
+```
+
+D.
+
+```XQL
+dataset = xdr
+_
+data
+| filter event
+_
+behavior = true
+event
+_sub
+_
+type = PROCESS_START and
+action
+_
+process_image_
+name ~= ".*?\.(?:pdf|docx)\.exe"
+```
+
+```text
+Correct answer is: B
+"The XQL query must at a minimum filter on the event_type field in order for it to be a valid BIOC rule."
+```
 
 #### 3 X
 
