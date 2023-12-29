@@ -1,15 +1,10 @@
 # PSE-Cortex
 
-## Study Approach
+## Refer
 
-1. Read PSE Cortex Professional Study Guide
-2. Check RUSH
-3. Refer
-   > <https://docs-cortex.paloaltonetworks.com/r/Cortex-XSIAM/Cortex-XSIAM-Administrator-Guide/Overview>
+> <https://docs-cortex.paloaltonetworks.com/r/Cortex-XSIAM/Cortex-XSIAM-Administrator-Guide/Overview>
 
 ---
-
-## **PSE Cortex Professional Study Guide**
 
 ## **RUSH**
 

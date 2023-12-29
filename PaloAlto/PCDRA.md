@@ -8,9 +8,7 @@
 
 ## **RUSH**
 
-### XDR
-
-#### 1
+### 1
 
 Phishing belongs which of the following MITRE ATT&CK tactics?
 
@@ -21,7 +19,7 @@ Phishing belongs which of the following MITRE ATT&CK tactics?
 
 **```Correct Answer: D```**
 
-#### 2
+### 2
 
 When creating a BIOC rule, which XQL query can be used?
 
@@ -64,7 +62,7 @@ Correct answer is: B
 "The XQL query must at a minimum filter on the event_type field in order for it to be a valid BIOC rule."
 ```
 
-#### 3 X
+### 3 X
 
 Which built-in dashboard would be the best option for an executive, if they were looking for the Mean Time to Resolution (MTTR) metric?
 
@@ -75,7 +73,7 @@ Which built-in dashboard would be the best option for an executive, if they were
 
 ```不多说了，选C，打开这个dashboard，在右上角```
 
-#### 4
+### 4
 
 What are two purposes of “Respond to Malicious Causality Chains” in a Cortex XDR Windows Malware profile? (Choose two.)
 
@@ -86,7 +84,7 @@ What are two purposes of “Respond to Malicious Causality Chains” in a Cortex
 
 **```Correct Answer: A D```**
 
-#### 5
+### 5
 
 When creating a custom XQL query in a dashboard, how would a user save that XQL query to the Widget Library?
 
@@ -97,7 +95,7 @@ When creating a custom XQL query in a dashboard, how would a user save that XQL 
 
 **```Correct Answer: D```**
 
-#### 6
+### 6
 
 What license would be required for ingesting external logs from various vendors?
 
@@ -108,7 +106,7 @@ What license would be required for ingesting external logs from various vendors?
 
 **```Correct Answer: C```**
 
-#### 7
+### 7
 
 An attacker tries to load dynamic libraries on macOS from an unsecure location. Which Cortex XDR module can prevent this attack?
 
@@ -119,7 +117,7 @@ An attacker tries to load dynamic libraries on macOS from an unsecure location. 
 
 **```Correct Answer: D```**
 
-#### 8
+### 8
 
 What is the purpose of the Unit 42 team?
 
@@ -130,7 +128,7 @@ What is the purpose of the Unit 42 team?
 
 **```Correct Answer: C```**
 
-#### 9
+### 9
 
 Which Type of IOC can you define in Cortex XDR?
 
@@ -141,7 +139,7 @@ Which Type of IOC can you define in Cortex XDR?
 
 **```Correct Answer: C```**
 
-#### 10 X
+### 10 X
 
 When viewing the incident directly, what is the “assigned to” field value of a new Incident that was just reported to Cortex?
 
@@ -152,7 +150,7 @@ When viewing the incident directly, what is the “assigned to” field value of
 
 ```不多说了，XDR上看过，是Unassigned```
 
-#### 11
+### 11
 
 In incident-related widgets, how would you filter the display to only show incidents that were “starred”?
 
@@ -163,7 +161,7 @@ In incident-related widgets, how would you filter the display to only show incid
 
 **```Correct Answer: D```**
 
-#### 12 X
+### 12 X
 
 Where would you view the WildFire report in an incident?
 
@@ -174,7 +172,7 @@ Where would you view the WildFire report in an incident?
 
 ```Answer should be - A.```
 
-#### 14
+### 14
 
 Which engine, of the following, in Cortex XDR determines the most relevant artifacts in each alert and aggregates all alerts related to an event into
 an incident?
@@ -186,7 +184,7 @@ an incident?
 
 **```Correct Answer: B```**
 
-#### 15 ？
+### 15 ？
 
 Which type of BIOC rule is currently available in Cortex XDR?
 
@@ -197,7 +195,7 @@ Which type of BIOC rule is currently available in Cortex XDR?
 
 ```XDR上Discovery和Dropper都有，可能一个是后来新出的type，答案推荐D，那就选D吧```
 
-#### 16
+### 16
 
 In Windows and macOS you need to prevent the Cortex XDR Agent from blocking execution of a file based on the digital signer. What is one way to
 add an exception for the singer?
@@ -209,7 +207,7 @@ add an exception for the singer?
 
 **```Correct Answer: C```**
 
-#### 17
+### 17
 
 As a Malware Analyst working with Cortex XDR you notice an alert suggesting that there was a prevented attempt to download Cobalt Strike on
 one of your servers. Days later, you learn about a massive ongoing supply chain attack. Using Cortex XDR you recognize that your server was
@@ -223,7 +221,7 @@ servers?
 
 **```Correct Answer: A```**
 
-#### 19 X
+### 19 X
 
 What is the purpose of targeting software vendors in a supply-chain attack?
 
@@ -247,7 +245,7 @@ What is the purpose of targeting software vendors in a supply-chain attack?
 因此，最准确的答案是 - A. 利用可信软件交付方法。 这是供应链攻击常见的目的，通过这种方法，攻击者能够在广大用户中有效地传播恶意软件或进行其他恶意活动。
 ```
 
-#### 20
+### 20
 
 What is the standard installation disk space recommended to install a Broker VM?
 
@@ -258,7 +256,7 @@ What is the standard installation disk space recommended to install a Broker VM?
 
 **```Correct Answer: C```**
 
-#### 21
+### 21
 
 Where can SHA256 hash values be used in Cortex XDR Malware Protection Profiles?
 
@@ -269,7 +267,7 @@ Where can SHA256 hash values be used in Cortex XDR Malware Protection Profiles?
 
 **```Correct Answer: D```**
 
-#### 22
+### 22
 
 How does Cortex XDR agent for Windows prevent ransomware attacks from compromising the file system?
 
@@ -280,7 +278,7 @@ How does Cortex XDR agent for Windows prevent ransomware attacks from compromisi
 
 **```Correct Answer: B```**
 
-#### 23
+### 23
 
 What functionality of the Broker VM would you use to ingest third-party firewall logs to the Cortex Data Lake?
 
@@ -291,7 +289,7 @@ What functionality of the Broker VM would you use to ingest third-party firewall
 
 **```Correct Answer: B```**
 
-#### 24
+### 24
 
 In the deployment of which Broker VM applet are you required to install a strong cipher SHA256-based SSL certificate?
 
@@ -302,7 +300,7 @@ In the deployment of which Broker VM applet are you required to install a strong
 
 **```Correct Answer: B```**
 
-#### 25
+### 25
 
 When is the wss (WebSocket Secure) protocol used?
 
@@ -313,7 +311,7 @@ When is the wss (WebSocket Secure) protocol used?
 
 **```Correct Answer: D```**
 
-#### 26
+### 26
 
 With a Cortex XDR Prevent license, which objects are considered to be sensors?
 
@@ -324,7 +322,7 @@ With a Cortex XDR Prevent license, which objects are considered to be sensors?
 
 **```Correct Answer: C```**
 
-#### 27
+### 27
 
 Which license is required when deploying Cortex XDR agent on Kubernetes Clusters as a DaemonSet?
 
@@ -335,7 +333,7 @@ Which license is required when deploying Cortex XDR agent on Kubernetes Clusters
 
 **```Correct Answer: D```**
 
-#### 28
+### 28
 
 What kind of the threat typically encrypts user files?
 
@@ -346,7 +344,7 @@ What kind of the threat typically encrypts user files?
 
 **```Correct Answer: A```**
 
-#### 29
+### 29
 
 When using the “File Search and Destroy” feature, which of the following search hash type is supported?
 
@@ -357,7 +355,7 @@ When using the “File Search and Destroy” feature, which of the following sea
 
 **```Correct Answer: A```**
 
-#### 30 X
+### 30 X
 
 If you have an isolated network that is prevented from connecting to the Cortex Data Lake, which type of Broker VM setup can you use to facilitate the communication?
 
@@ -374,7 +372,7 @@ Caching just means it will cache the data, but if it doesn't have the data it wi
 correct.
 ```
 
-#### 31
+### 31
 
 What is by far the most common tactic used by ransomware to shut down a victim’s operation?
 
@@ -385,7 +383,7 @@ What is by far the most common tactic used by ransomware to shut down a victim�
 
 **```Correct Answer: D```**
 
-#### 32
+### 32
 
 Cortex XDR Analytics can alert when detecting activity matching the following MITRE ATT&CKTM techniques.
 
@@ -396,7 +394,7 @@ Cortex XDR Analytics can alert when detecting activity matching the following MI
 
 **```Correct Answer: D```**
 
-#### 33
+### 33
 
 When selecting multiple Incidents at a time, what options are available from the menu when a user right-clicks the incidents? (Choose two.)
 
@@ -406,7 +404,7 @@ When selecting multiple Incidents at a time, what options are available from the
 - D. Delete the selected Incidents.
 ```A B```
 
-#### 34
+### 34
 
 A file is identified as malware by the Local Analysis module whereas WildFire verdict is Benign, Assuming WildFire is accurate. Which statement is
 correct for the incident?
@@ -418,7 +416,7 @@ correct for the incident?
 
 **```Correct Answer: B```**
 
-#### 35
+### 35
 
 What is the outcome of creating and implementing an alert exclusion?
 
@@ -429,7 +427,7 @@ What is the outcome of creating and implementing an alert exclusion?
 
 **```Correct Answer: B```**
 
-#### 36 X
+### 36 X
 
 Which statement is true for Application Exploits and Kernel Exploits?
 
@@ -453,7 +451,7 @@ Which statement is true for Application Exploits and Kernel Exploits?
 考虑到这些信息，最准确的陈述是 - C. 任何漏洞的最终目标都是到达内核。达到内核级别的控制可以给攻击者提供对整个系统的广泛控制，这对于攻击者来说是非常有价值的。因此，虽然不是所有攻击的最终目标都是内核，但从战略角度来看，内核级别的访问权确实是许多复杂攻击的主要目标。
 ```
 
-#### 37
+### 37
 
 To create a BIOC rule with XQL query you must at a minimum filter on which field in order for it to be a valid BIOC rule?
 
@@ -464,7 +462,7 @@ To create a BIOC rule with XQL query you must at a minimum filter on which field
 
 **```Correct Answer: D```**
 
-#### 38 X
+### 38 X
 
 Which of the following is an example of a successful exploit?
 
@@ -479,7 +477,7 @@ From documentation :
 https://www.paloaltonetworks.com/cyberpedia/malware-vs-exploits
 ```
 
-#### 39 X
+### 39 X
 
 Which of the following represents the correct relation of alerts to incidents?
 
@@ -494,7 +492,7 @@ Otherwise, the new incoming alert will create a new incident.
 https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Prevent-Administrator-Guide/Investigate-Incidents
 ```
 
-#### 40 X
+### 40 X
 
 Which of the following protection modules is checked first in the Cortex XDR Windows agent malware protection flow?
 
@@ -510,7 +508,7 @@ If the process tries to launch any child processes, the Cortex XDR agent first e
 If the parent process is a known targeted process that attempts to launch a restricted child process, the Cortex XDR agent blocks the child processes from running and reports the security event to Cortex XDR.
 ```
 
-#### 41
+### 41
 
 While working the alerts involved in a Cortex XDR incident, an analyst has found that every alert in this incident requires an exclusion. What will
 the Cortex XDR console automatically do to this incident if all alerts contained have exclusions?
@@ -522,7 +520,7 @@ the Cortex XDR console automatically do to this incident if all alerts contained
 
 **```Correct Answer: D```**
 
-#### 42
+### 42
 
 Network attacks follow predictable patterns. If you interfere with any portion of this pattern, the attack will be neutralized. Which of the following
 statements is correct?
@@ -534,7 +532,7 @@ statements is correct?
 
 **```Correct Answer: A```**
 
-#### 43
+### 43
 
 After scan, how does file quarantine function work on an endpoint?
 
@@ -545,7 +543,7 @@ After scan, how does file quarantine function work on an endpoint?
 
 **```Correct Answer: C```**
 
-#### 44
+### 44
 
 Which two types of exception profiles you can create in Cortex XDR? (Choose two.)
 
@@ -556,7 +554,7 @@ Which two types of exception profiles you can create in Cortex XDR? (Choose two.
 
 **```Correct Answer: A C```**
 
-#### 45
+### 45
 
 Which profiles can the user use to configure malware protection in the Cortex XDR console?
 
@@ -567,7 +565,7 @@ Which profiles can the user use to configure malware protection in the Cortex XD
 
 **```Correct Answer: B```**
 
-#### 46
+### 46
 
 Which module provides the best visibility to view vulnerabilities?
 
@@ -578,7 +576,7 @@ Which module provides the best visibility to view vulnerabilities?
 
 **```Correct Answer: C```**
 
-#### 47
+### 47
 
 Which of the following is NOT a precanned script provided by Palo Alto Networks?
 
@@ -589,7 +587,7 @@ Which of the following is NOT a precanned script provided by Palo Alto Networks?
 
 **```Correct Answer: B```**
 
-#### 48
+### 48
 
 Live Terminal uses which type of protocol to communicate with the agent on the endpoint?
 
@@ -600,7 +598,7 @@ Live Terminal uses which type of protocol to communicate with the agent on the e
 
 **```Correct Answer: B```**
 
-#### 49
+### 49
 
 You can star security events in which two ways? (Choose two.)
 
@@ -611,7 +609,7 @@ You can star security events in which two ways? (Choose two.)
 
 **```Correct Answer: B D```**
 
-#### 50 X
+### 50 X
 
 Where would you go to add an exception to exclude a specific file hash from examination by the Malware profile for a Windows endpoint?
 
@@ -627,7 +625,7 @@ If you trust a certain file and know it to be benign, you can add the file hash 
 Similarly, if you want to always block a file from running on any of your endpoints, you can add the associated hash to the block list.
 ```
 
-#### 51
+### 51
 
 As a Malware Analyst working with Cortex XDR you notice an alert suggesting that there was a prevented attempt to open a malicious Word
 document. You learn from the WildFire report and AutoFocus that this document is known to have been used in Phishing campaigns since 2018.
@@ -640,7 +638,7 @@ What steps can you take to ensure that the same document is not opened by other 
 
 **```Correct Answer: B```**
 
-#### 52
+### 52
 
 When investigating security events, which feature in Cortex XDR is useful for reverting the changes on the endpoint?
 
@@ -651,7 +649,7 @@ When investigating security events, which feature in Cortex XDR is useful for re
 
 **```Correct Answer: D```**
 
-#### 53
+### 53
 
 What is the purpose of the Cortex Data Lake?
 
@@ -662,7 +660,7 @@ What is the purpose of the Cortex Data Lake?
 
 **```Correct Answer: B```**
 
-#### 54
+### 54
 
 When creating a scheduled report which is not an option?
 
@@ -673,7 +671,7 @@ When creating a scheduled report which is not an option?
 
 **```Correct Answer: B```**
 
-#### 55 X
+### 55 X
 
 Which statement regarding scripts in Cortex XDR is true?
 
@@ -687,7 +685,7 @@ I think - B. A is wrong for sure, you need at least Python 3.7 to run scripts on
 https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Pro-Administrator-Guide/Run-Scripts-on-an-Endpoint
 ```
 
-#### 56
+### 56
 
 What is the function of WildFire for Cortex XDR?
 
@@ -698,7 +696,7 @@ What is the function of WildFire for Cortex XDR?
 
 **```Correct Answer: C```**
 
-#### 57 X
+### 57 X
 
 A Linux endpoint with a Cortex XDR Pro per Endpoint license and Enhanced Endpoint Data enabled has reported malicious activity, resulting in the creation of a file that you wish to delete. Which action could you take to delete the file?
 
@@ -713,7 +711,7 @@ See this overview from Palo Alto: https://youtu.be/HBzxmSjHYt4?si=JqjrLZkLTXBeqX
 Here he talks about deleting a file through the Remediation Suggestions.
 ```
 
-#### 58
+### 58
 
 Which of the following best defines the Windows Registry as used by the Cortex XDR agent?
 
@@ -726,7 +724,7 @@ system
 
 **```Correct Answer: A```**
 
-#### 59
+### 59
 
 Which statement best describes how Behavioral Threat Protection (BTP) works?
 
@@ -737,7 +735,7 @@ Which statement best describes how Behavioral Threat Protection (BTP) works?
 
 **```Correct Answer: D```**
 
-#### 60 X
+### 60 X
 
 Which of the following paths will successfully activate Remediation Suggestions?
 
@@ -751,7 +749,7 @@ This should be - B. Incidents > click the 3 dots > Remediation Suggestions
 C is wrong because Causality View > Actions > Live Terminal
 ```
 
-#### 61
+### 61
 
 In Cortex XDR management console scheduled reports can be forwarded to which of the following applications/services?
 
@@ -762,7 +760,7 @@ In Cortex XDR management console scheduled reports can be forwarded to which of 
 
 **```Correct Answer: B```**
 
-#### 62
+### 62
 
 Which type of IOC can you define in Cortex XDR?
 
@@ -773,7 +771,7 @@ Which type of IOC can you define in Cortex XDR?
 
 **```Correct Answer: B```**
 
-#### 63
+### 63
 
 What is the action taken out by Managed Threat Hunting team for Zero Day Exploits?
 
@@ -784,7 +782,7 @@ What is the action taken out by Managed Threat Hunting team for Zero Day Exploit
 
 **```Correct Answer: C```**
 
-#### 64
+### 64
 
 What is an example of an attack vector for ransomware?
 
@@ -795,7 +793,7 @@ What is an example of an attack vector for ransomware?
 
 **```Correct Answer: B```**
 
-#### 65 X
+### 65 X
 
 What should you do to automatically convert leads into alerts after investigating a lead?
 
@@ -810,7 +808,7 @@ Leads are not static IOCs.
 https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Pro-Administrator-Guide/Research-a-Known-Threat#:~:text=Inspect%20the%20information%20again%2C%20and%20identify%20any%20characteristics%20you%20can%20use%20to%20Create%20a%20BIOC%20Rule%20or%20Create%20a%20Correlation%20Rule.
 ```
 
-#### 66
+### 66
 
 When reaching out to TAC for additional technical support related to a Security Event; what are two critical pieces of information you need to
 collect from the Agent? (Choose two.)
@@ -823,7 +821,7 @@ E. A list of all the current exceptions applied to the agent.
 
 **```Correct Answer:B D```**
 
-#### 67
+### 67
 
 Which function describes the removal of a specific file from its location on a local or removable drive to a protected folder to prevent the file from
 being executed?
@@ -835,7 +833,7 @@ being executed?
 
 **```Correct Answer: B```**
 
-#### 68
+### 68
 
 What is the maximum number of agents one Broker VM local agent applet can support?
 
@@ -846,7 +844,7 @@ What is the maximum number of agents one Broker VM local agent applet can suppor
 
 **```Correct Answer: C```**
 
-#### 69
+### 69
 
 Which of the following represents a common sequence of cyber attack tactics?
 
@@ -857,7 +855,7 @@ Which of the following represents a common sequence of cyber attack tactics?
 
 **```Correct Answer: D```**
 
-#### 70 X
+### 70 X
 
 Which Exploit Protection Module (EPM) can be used to prevent attacks based on OS function?
 
@@ -881,7 +879,7 @@ DLL 安全性与动态链接库（DLL）文件有关。虽然 DLL 是操作系�
 在这些选项中，- C. UASLR (User Address Space Layout Randomization) 最直接地与操作系统功能相关，并提供了基于这些功能的攻击防御。UASLR 通过增加内存布局的不确定性来提高操作系统的安全性，从而阻止基于内存的攻击。
 ```
 
-#### 72
+### 72
 
 Which search methods is supported by File Search and Destroy?
 
@@ -892,7 +890,7 @@ Which search methods is supported by File Search and Destroy?
 
 **```Correct Answer: C```**
 
-#### 73
+### 73
 
 Which of the following Live Terminal options are available for Android systems?
 
@@ -903,7 +901,7 @@ Which of the following Live Terminal options are available for Android systems?
 
 **```Correct Answer: B```**
 
-#### 74
+### 74
 
 What contains a logical schema in an XQL query?
 
@@ -914,7 +912,7 @@ What contains a logical schema in an XQL query?
 
 **```Correct Answer: C```**
 
-#### 75
+### 75
 
 Which minimum Cortex XDR agent version is required for Kubernetes Cluster?
 
@@ -925,7 +923,7 @@ Which minimum Cortex XDR agent version is required for Kubernetes Cluster?
 
 **```Correct Answer: C```**
 
-#### 76
+### 76
 
 In the Cortex XDR console, from which two pages are you able to manually perform the agent upgrade action? (Choose two.)
 
@@ -936,7 +934,7 @@ In the Cortex XDR console, from which two pages are you able to manually perform
 
 **```Correct Answer: A```** C
 
-#### 77 X
+### 77 X
 
 Which version of python is used in live terminal?
 
@@ -950,7 +948,7 @@ The Answer is - B.
 https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Pro-Administrator-Guide/Initiate-a-Live-Terminal-Session#:~:text=The%20Python%20command%20interpreter%20uses%20Unix%20command%20syntax%20and%20supports%20Python%203%20with%20standard%20Python%20libraries
 ```
 
-#### 78
+### 78
 
 Under which conditions is Local Analysis evoked to evaluate a file before the file is allowed to run?
 
@@ -961,7 +959,7 @@ Under which conditions is Local Analysis evoked to evaluate a file before the fi
 
 **```Correct Answer: B```**
 
-#### 79
+### 79
 
 What is the difference between presets and datasets in XQL?
 
@@ -972,7 +970,7 @@ What is the difference between presets and datasets in XQL?
 
 **```Correct Answer: C```**
 
-#### 80
+### 80
 
 Cortex XDR is deployed in the enterprise and you notice a cobalt strike attack via an ongoing supply chain compromise was prevented on 1 server.
 What steps can you take to ensure the same protection is extended to all your servers?
@@ -984,7 +982,7 @@ What steps can you take to ensure the same protection is extended to all your se
 
 **```Correct Answer: D```**
 
-#### 81
+### 81
 
 Why would one threaten to encrypt a hypervisor or, potentially, a multiple number of virtual machines running on a server?
 
@@ -995,7 +993,7 @@ Why would one threaten to encrypt a hypervisor or, potentially, a multiple numbe
 
 **```Correct Answer: A```**
 
-#### 82
+### 82
 
 What types of actions you can execute with live terminal session?
 
@@ -1006,7 +1004,7 @@ What types of actions you can execute with live terminal session?
 
 **```Correct Answer: A```**
 
-#### 83
+### 83
 
 How can you pivot within a row to Causality view and Timeline views for further investigate?
 
@@ -1017,7 +1015,7 @@ How can you pivot within a row to Causality view and Timeline views for further 
 
 **```Correct Answer: C```**
 
-#### 84
+### 84
 
 What motivation do ransomware attackers have for returning access to systems once their victims have paid?
 
@@ -1028,7 +1026,7 @@ What motivation do ransomware attackers have for returning access to systems onc
 
 **```Correct Answer: A```**
 
-#### 85
+### 85
 
 What is the WildFire analysis file size limit for Windows PE files?
 
@@ -1039,7 +1037,7 @@ What is the WildFire analysis file size limit for Windows PE files?
 
 **```Correct Answer: B```**
 
-#### 86
+### 86
 
 Which Exploit Prevention Module (EPM) provides better entropy for randomization of memory locations?
 
@@ -1050,7 +1048,7 @@ Which Exploit Prevention Module (EPM) provides better entropy for randomization 
 
 **```Correct Answer: A```**
 
-#### 87
+### 87
 
 To stop a network-based attack, any interference with a portion of the attack pattern is enough to prevent it from succeeding. Which statement is
 correct regarding the Cortex XDR Analytics module?
@@ -1062,7 +1060,7 @@ correct regarding the Cortex XDR Analytics module?
 
 **```Correct Answer: B```**
 
-#### 88
+### 88
 
 The Cortex XDR console has triggered an incident, blocking a vitally important piece of software in your organization that is known to be benign.
 Which of the following options would prevent Cortex XDR from blocking this software in the future, for all endpoints in your organization?
@@ -1074,7 +1072,7 @@ Which of the following options would prevent Cortex XDR from blocking this softw
 
 **```Correct Answer: D```**
 
-#### 89
+### 89
 
 What kind of malware uses encryption, data theft, denial of service, and possibly harassment to take advantage of a victim?
 
@@ -1085,7 +1083,7 @@ What kind of malware uses encryption, data theft, denial of service, and possibl
 
 **```Correct Answer: C```**
 
-#### 90
+### 90
 
 As a Malware Analyst working with Cortex XDR you notice an alert suggesting that there was a prevented attempt to open a malicious Word
 document. You learn from the WildFire report and AutoFocus that this document is known to have been used in Phishing campaigns since 2018.
@@ -1098,7 +1096,7 @@ What steps can you take to ensure that the same document is not opened by other 
 
 **```Correct Answer: D```**
 
-#### 91
+### 91
 
 Can you disable the ability to use the Live Terminal feature in Cortex XDR?
 
