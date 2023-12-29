@@ -553,7 +553,8 @@ Which two types of exception profiles you can create in Cortex XDR? (Choose two.
 - B. agent exception profiles that apply to specific endpoints
 - C. global exception profiles that apply to all endpoints
 - D. role-based profiles that apply to specific endpoints
-```A C```
+
+**```Correct Answer: A C```**
 
 #### 45
 
@@ -607,7 +608,8 @@ You can star security events in which two ways? (Choose two.)
 - B. Create an Incident-starring configuration.
 - C. Manually star an alert.
 - D. Manually star an Incident.
-```B D```
+
+**```Correct Answer: B D```**
 
 #### 50 X
 
@@ -818,7 +820,8 @@ collect from the Agent? (Choose two.)
 - C. The distribution id of the agent.
 - D. The agent technical support file.
 E. A list of all the current exceptions applied to the agent.
-```B D```
+
+**```Correct Answer:B D```**
 
 #### 67
 
