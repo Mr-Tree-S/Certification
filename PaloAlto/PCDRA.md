@@ -19,7 +19,6 @@ Phishing belongs which of the following MITRE ATT&CK tactics?
 - C. Reconnaissance, Persistence
 - D. Reconnaissance, Initial Access
 
-
 **```Correct Answer: D```**
 
 #### 2
@@ -60,7 +59,7 @@ event_sub_type = PROCESS_START and
 action_process_image_name ~= ".*?\.(?:pdf|docx)\.exe"
 ```
 
-```t
+```text
 Correct answer is: B
 "The XQL query must at a minimum filter on the event_type field in order for it to be a valid BIOC rule."
 ```
@@ -95,7 +94,6 @@ When creating a custom XQL query in a dashboard, how would a user save that XQL 
 - B. This isn’t supported, you have to exit the dashboard and go into the Widget Library first to create it.
 - C. Click on “Save to Action Center” in the dashboard and you will be prompted to give the query a name and description.
 - D. Click on “Save to Widget Library” in the dashboard and you will be prompted to give the query a name and description.
-
 
 **```Correct Answer: D```**
 
