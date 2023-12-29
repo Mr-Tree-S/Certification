@@ -28,70 +28,35 @@ When creating a BIOC rule, which XQL query can be used?
 - A.
 
 ```XQL
-dataset = xdr
-_
-data
-| filter event
-_sub
-_
-type = PROCESS_START and
-action
-_
-process_image_
-name ~= ".*?\.(?:pdf|docx)\.exe"
+dataset = xdr_data
+| filter event_sub_type = PROCESS_START and
+action_process_image_name ~= ".*?\.(?:pdf|docx)\.exe"
 ```
 
 - B.
 
 ```XQL
-dataset = xdr
-_
-data
-| filter event
-_
-type = PROCESS and
-event
-_sub
-_
-type = PROCESS_START and
-action
-_
-process_image_
-name ~= "._?\.(?:pdf|docx)\.exe"
+dataset = xdr_data
+| filter event_type = PROCESS and
+event_sub_type = PROCESS_START and
+action_process_image_name ~= "._?\.(?:pdf|docx)\.exe"
 ```
 
 - C.
 
 ```XQL
-dataset = xdr
-_
-data
-| filter action
-_
-process_image_
-name ~= "._?\.(?:pdf|docx)\.exe"
-| fields action
-_
-process_image
+dataset = xdr_data
+| filter action_process_image_name ~= "._?\.(?:pdf|docx)\.exe"
+| fields action_process_image
 ```
 
 - D.
 
 ```XQL
-dataset = xdr
-_
-data
-| filter event
-_
-behavior = true
-event
-_sub
-_
-type = PROCESS_START and
-action
-_
-process_image_
-name ~= ".*?\.(?:pdf|docx)\.exe"
+dataset = xdr_data
+| filter event_behavior = true
+event_sub_type = PROCESS_START and
+action_process_image_name ~= ".*?\.(?:pdf|docx)\.exe"
 ```
 
 ```Correct answer is: B    "The XQL query must at a minimum filter on the event_type field in order for it to be a valid BIOC rule."```
