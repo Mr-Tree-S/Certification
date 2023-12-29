@@ -20,8 +20,8 @@ What will allow Cortex XSOAR to accomplish this in the most efficient way?
 
 **```Correct Answer: C```**
 
-
 ### 2
+
 What allows the use of predetermined Palo Alto Networks roles to assign access rights to Cortex XDR users?
 
 - a. Restrictions security profile
@@ -32,6 +32,7 @@ What allows the use of predetermined Palo Alto Networks roles to assign access r
 **```Correct Answer: D```**
 
 ### 3
+
 What integration allows searching and displaying Splunk results within Cortex XSOAR?
 
 - a. Demisto App for Splunk integration
@@ -41,8 +42,8 @@ What integration allows searching and displaying Splunk results within Cortex XS
 
 **```Correct Answer: B```**
 
-
 ### 4
+
 How can Cortex XSOAR save time when a phishing incident occurs?
 
 - a. It can automatically identify every mailbox that received the phish and create corresponding cases for them
@@ -52,8 +53,8 @@ How can Cortex XSOAR save time when a phishing incident occurs?
 
 **```Correct Answer: A```**
 
-
 ### 5
+
 Which two types of Indicators of compromise (IOCs) are available for creation in Cortex XDR?
 
 - a. Internet Protocol (IP)
@@ -62,6 +63,7 @@ Which two types of Indicators of compromise (IOCs) are available for creation in
 - d. domain
 
 ### 6
+
 Which command is used to add Cortex XSOAR “User1” to an investigation from the War Room?
 
 - a. #Invite User1
@@ -70,6 +72,7 @@ Which command is used to add Cortex XSOAR “User1” to an investigation from t
 - d. !Invite User1
 
 ### 7
+
 Which component displays an entire picture of an attack, including the root cause or delivery point?
 
 - a. Cortex XSOAR Work Plan
@@ -78,6 +81,7 @@ Which component displays an entire picture of an attack, including the root caus
 - d. Cortex SOC Orchestrator
 
 ### 8
+
 Which two items are stitched to the Cortex XDR causality chain? (Choose two.)
 
 - a. registry set value
@@ -106,6 +110,7 @@ What is the appropriate response to the customer?
 - d. Agree to build the integration as part of the POC
 
 ### 11
+
 Which service helps uncover attackers wherever they hide by combining world-class threat hunters with Cortex XDR technology that runs on integrated endpoint, network, and cloud data sources?
 
 - a. Cloud Identity Engine (CIE)
@@ -114,6 +119,7 @@ Which service helps uncover attackers wherever they hide by combining world-clas
 - d. Managed Threat Hunting (MTH)
 
 ### 12
+
 What is the result of creating an exception from an exploit security event?
 
 - a. Triggered exploit protection module (EPM) for the host and process involved is disabled
@@ -122,6 +128,7 @@ What is the result of creating an exception from an exploit security event?
 - d. Administrators are exempt from generating alerts for 24 hours
 
 ### 13
+
 Cortex XSOAR has extracted a malicious Internet Protocol (IP) address involved in command-and-control (C2) traffic
 
 What is the best method to block this IP from communicating with endpoints without requiring a configuration change on the firewall?
@@ -132,6 +139,7 @@ What is the best method to block this IP from communicating with endpoints witho
 - d. Have XSOAR automatically create a NetOps ticket requesting a configuration change to the firewall to block the IP
 
 ### 14
+
 What is the size of the free Cortex Data Lake instance provided to a customer who has activated a TMS tenant, but has not purchased a Cortex Data Lake instance?
 
 - a. 10TB
@@ -170,6 +178,7 @@ Causality group owner (因果关系组的所有者)：
 ```
 
 ### 17
+
 How do sub-playbooks affect the incident Context Data?
 
 - a. When set to global, sub-playbook tasks do not have access to the root context
@@ -178,6 +187,7 @@ How do sub-playbooks affect the incident Context Data?
 - d. When set to private, task outputs are automatically written to the root context
 
 ### 18
+
 An adversary attempts to communicate with malware running on a network in order to control malware activities or to exfiltrate data from the network
 
 What Cortex XDR Analytics alert will this activity most likely trigger?
@@ -188,6 +198,7 @@ What Cortex XDR Analytics alert will this activity most likely trigger?
 - d. DNS Tunneling
 
 ### 19
+
 Which two types of indicators of compromise (IOCs) are available for creation in Cortex XDR?
 
 - a. Registry b. Hostname
@@ -196,6 +207,7 @@ Which two types of indicators of compromise (IOCs) are available for creation in
 - c. Ransomware d. phishing
 
 ### 20
+
 Which attack method is a result of techniques designed to gain access through vulnerabilities in the code of an operating system (OS) or application?
 
 - a. Malware
@@ -204,6 +216,7 @@ Which attack method is a result of techniques designed to gain access through vu
 - d. phishing
 
 ### 21
+
 What is a benefit of user entity behavior analytics (UEBA) over security information and event management (SIEM)?
 
 - a. UEBA can add trusted signers of Windows or Mac processes to a whitelist in the Endpoint Security Manager (ESM) Console
@@ -212,6 +225,7 @@ What is a benefit of user entity behavior analytics (UEBA) over security informa
 - d. SIEMs supports only agentless scanning, not agent-based workload protection across VMs, containers, Kubernetes.
 
 ### 22
+
 Which statement applies to a Cortex XSOAR engine that is part of a load-balancing group?
 
 - a. It does not appear in the engine drop-down menu when configuring an integration instance
@@ -220,6 +234,7 @@ Which statement applies to a Cortex XSOAR engine that is part of a load-balancin
 - d. It must have port 443 open to allow the XSOAR server to establish a connection
 
 ### 23
+
 Which step is required to prepare the virtual desktop infrastructure (VDI) golden image?
 
 - a. Run the VDI conversion tool
@@ -228,6 +243,7 @@ Which step is required to prepare the virtual desktop infrastructure (VDI) golde
 - d. Review any portable executable (PE) files WildFire determined to be malicious
 
 ### 24
+
 Which integration allows data to be pushed from Cortex XSOAR into Splunk?
 
 - a. SplunkUpdate integration
@@ -236,6 +252,7 @@ Which integration allows data to be pushed from Cortex XSOAR into Splunk?
 - d. ArcSight ESM integration
   
 ### 25
+
 A Cortex XDR Pro administrator is alerted to a suspicious process creation security event from multiple users who believe these events are false positives
 
 Which two steps should be taken confirm the false positives and create an exception? (Choose two)
@@ -246,6 +263,7 @@ Which two steps should be taken confirm the false positives and create an except
 - d. Within the Malware Security profile, disable the Prevent Malicious Child Process Execution module
 
 ### 26
+
 The Cortex XDR management service requires which other Palo Alto Networks product?
 
 - a. Cortex Data Lake
@@ -254,6 +272,7 @@ The Cortex XDR management service requires which other Palo Alto Networks produc
 - d. Cortex XSOAR
 
 ### 27
+
 Which Cortex XDR agent capability prevents loading malicious files from USB-connected removable equipment?
 
 - a. Device control
@@ -292,6 +311,7 @@ Which two methods does the Cortex XDR agent use to identify malware during a sch
 ```
 
 ### 30
+
 What are two capabilities of a War Room? (Choose two)
 
 - a. Run ad-hoc automation commands
@@ -300,6 +320,7 @@ What are two capabilities of a War Room? (Choose two)
 - d. Create playbooks for orchestration
 
 ### 31
+
 Which two Cortex XSOAR incident type features can be customized under Settings > Advanced > Incident Types? (Choose two)
 
 - a. Setting reminders for an incident service level agreement (SLA)
@@ -308,6 +329,7 @@ Which two Cortex XSOAR incident type features can be customized under Settings >
 - d. Dropping new incidents of the same type that contain similar information
 
 ### 32
+
 Which two areas of Cortex XDR are used for threat hunting activities? (Choose two)
 
 - a. Host insights module
@@ -316,6 +338,7 @@ Which two areas of Cortex XDR are used for threat hunting activities? (Choose tw
 - d. Query builder
 
 ### 33
+
 Which two entities can be created as a behavioral indicator of compromise (BIOC)? (Choose two)
 
 - a. Network
@@ -368,6 +391,7 @@ On a multi-tenanted v6.2 Cortex XSOAR server, which path leads to the server log
 - d. /var/lib/demisto/server.log
 
 ### 38
+
 What is a benefit offered by Cortex XSOAR?
 
 - a. It enables an end-to-end view of everything in the customer environment that affects digital employee productivity
@@ -376,6 +400,7 @@ What is a benefit offered by Cortex XSOAR?
 - d. It allows the consolidation of multiple point products into a single integrated service
 
 ### 39
+
 Why is reputation scoring important in the Threat Intelligence Module of Cortex XSOAR?
 
 - a. It helps identify threat intelligence vendors with substandard content
@@ -384,6 +409,7 @@ Why is reputation scoring important in the Threat Intelligence Module of Cortex 
 - d. It deconflicts prioritization when two vendors give different scores for the same indicator
 
 ### 40
+
 Which solution profiles network behavior metadata, not playloads and files, allowing effective operation regardless of encrypted or unencrypted communication protocols, like HTTPS?
 
 - a. Endpoint detection and response (EDR)
@@ -392,6 +418,7 @@ Which solution profiles network behavior metadata, not playloads and files, allo
 - d. Network Detection and Response (NDR)
 
 ### 41
+
 Which method is used for third-party network data consumption?
 
 - a. File reader to the /var/log/messagers file on the device
@@ -408,8 +435,8 @@ Which two playbook functionalities allow looping through a group of tasks during
 - c. CommonPolling Playbooks
 - d. Playbook tasks
 
-
 ### 44
+
 Which playbook feature allows concurrent execution of tasks?
 
 - a. Automation tasks
@@ -418,6 +445,7 @@ Which playbook feature allows concurrent execution of tasks?
 - d. Conditional tasks
 
 ### 45
+
 Which Cortex XDR license is required for a customer that requests endpoint detection and response (EDR) data collection capabilities?
 
 - a. Cortex XDR Prevent
@@ -426,6 +454,7 @@ Which Cortex XDR license is required for a customer that requests endpoint detec
 - d. Cortex XDR Pro per TB
 
 ### 46
+
 Where can all the relevant incidents for an indicator be viewed?
 
 - a. Linked indicators column in incident screen
@@ -434,6 +463,7 @@ Where can all the relevant incidents for an indicator be viewed?
 - d. Related indicators column in incident screen
 
 ### 47
+
 Which type of log is ingested natively in Cortex XDR Pro per TB?
 
 - a. Docker
@@ -442,6 +472,7 @@ Which type of log is ingested natively in Cortex XDR Pro per TB?
 - d. Google Kubernetes Engine
 
 ### 48
+
 Which two manual actions are allowed on War Room entries? (Choose two)
 
 - a. Mark as scheduled entry
@@ -450,6 +481,7 @@ Which two manual actions are allowed on War Room entries? (Choose two)
 - d. Mark as evidence
 
 ### 49
+
 What are two reasons incident investigation is needed in Cortex XDR? (Choose two)
 
 - a. Insider Threats may not be blocked and initial activity may go undetected
@@ -457,6 +489,7 @@ What are two reasons incident investigation is needed in Cortex XDR? (Choose two
 agent
 
 ### 50
+
 Which command-line interface (CLI) query would retrieve the last three Splunk events?
 
 - a. !query using=splunk_instance_1 query=”* | last 3”
@@ -465,6 +498,7 @@ Which command-line interface (CLI) query would retrieve the last three Splunk ev
 - d. !search using=splunk_instance_1 query=”* | 3”
 
 ### 51
+
 Which playbook functionality allows grouping of tasks to create functional building blocks?
 
 - a. Sub-playbook
@@ -473,6 +507,7 @@ Which playbook functionality allows grouping of tasks to create functional build
 - d. Conditional tasks
 
 ### 52
+
 Which two filter operators are available in Cortex XDR? (Choose two)
 
 - a. =
@@ -481,6 +516,7 @@ Which two filter operators are available in Cortex XDR? (Choose two)
 - d. <>
 
 ### 53
+
 Which product enables the discovery, exchange, and contribution of security automation playbooks, built into Cortex XSOAR?
 
 - a. XSOAR Marketplace
@@ -489,6 +525,7 @@ Which product enables the discovery, exchange, and contribution of security auto
 - d. XSOAR Ticketing Systems
 
 ### 54
+
 A Cortex XSOAR customer wants to send a survey to users asking them to input their manager’s email for a training use case so the manager can receive status reports on the employee’s training. However, the customer is concerned users will provide incorrect information to avoid sending status updates to their manager
 
 How can Cortex XSOAR most efficiently sanitize user input prior to using the responses in the playbook?
@@ -498,8 +535,8 @@ How can Cortex XSOAR most efficiently sanitize user input prior to using the res
 - c. Create a sub-playbook and import a list of manager emails into XSOAR. Use a conditional task comparison to check if the response matches an email on the list. If no matches are found, loop the sub-playbook and send the survey back to the user until a match is found
 - d. Create a conditional task comparison to check if the response contains a valid email address
 
-
 ### 55
+
 When initiated, which Cortex XDR capability allows immediate termination of the process or whole process tree on an anomalous process discovered during investigation of a security event?
 
 - a. Live sensors
@@ -508,6 +545,7 @@ When initiated, which Cortex XDR capability allows immediate termination of the 
 - d. Log stitching
 
 ### 56
+
 Which statement applies to the differentiation of Cortex XDR from security information and event management (SIEM)?
 
 - a. SIEM has been entirely designed and built as cloud-native, with the ability to stitch together cloud logs, on-premises logs, third-party logs, and endpoint logs
@@ -516,6 +554,7 @@ Which statement applies to the differentiation of Cortex XDR from security infor
 - d. SIEM has access to raw logs from agents, where Cortex XDR traditionally only gets alerts
 
 ### 57
+
 What is used to display only file entries in a War Room?
 
 - a. ;files from War Room CLI
