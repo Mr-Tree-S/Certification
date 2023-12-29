@@ -62,7 +62,7 @@ Correct answer is: B
 "The XQL query must at a minimum filter on the event_type field in order for it to be a valid BIOC rule."
 ```
 
-### 3 X
+### 3
 
 Which built-in dashboard would be the best option for an executive, if they were looking for the Mean Time to Resolution (MTTR) metric?
 
@@ -139,7 +139,7 @@ Which Type of IOC can you define in Cortex XDR?
 
 **```Correct Answer: C```**
 
-### 10 X
+### 10
 
 When viewing the incident directly, what is the “assigned to” field value of a new Incident that was just reported to Cortex?
 
@@ -161,7 +161,7 @@ In incident-related widgets, how would you filter the display to only show incid
 
 **```Correct Answer: D```**
 
-### 12 X
+### 12
 
 Where would you view the WildFire report in an incident?
 
@@ -221,7 +221,7 @@ servers?
 
 **```Correct Answer: A```**
 
-### 19 X
+### 19
 
 What is the purpose of targeting software vendors in a supply-chain attack?
 
@@ -355,7 +355,7 @@ When using the “File Search and Destroy” feature, which of the following sea
 
 **```Correct Answer: A```**
 
-### 30 X
+### 30
 
 If you have an isolated network that is prevented from connecting to the Cortex Data Lake, which type of Broker VM setup can you use to facilitate the communication?
 
@@ -366,10 +366,8 @@ If you have an isolated network that is prevented from connecting to the Cortex 
 
 ```text
 I believe the answer is B.
-Here is the admin guide, see the second bullet: https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Pro-Administrator-
-Guide/Activate-the-Local-Agent-Settings
-Caching just means it will cache the data, but if it doesn't have the data it will try to go get it. This won't work in an isolated network so C isn't
-correct.
+Here is the admin guide, see the second bullet: https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Pro-Administrator-Guide/Activate-the-Local-Agent-Settings
+Caching just means it will cache the data, but if it doesn't have the data it will try to go get it. This won't work in an isolated network so C isn't correct.
 ```
 
 ### 31
@@ -427,7 +425,7 @@ What is the outcome of creating and implementing an alert exclusion?
 
 **```Correct Answer: B```**
 
-### 36 X
+### 36
 
 Which statement is true for Application Exploits and Kernel Exploits?
 
@@ -462,7 +460,7 @@ To create a BIOC rule with XQL query you must at a minimum filter on which field
 
 **```Correct Answer: D```**
 
-### 38 X
+### 38
 
 Which of the following is an example of a successful exploit?
 
@@ -477,7 +475,7 @@ From documentation :
 https://www.paloaltonetworks.com/cyberpedia/malware-vs-exploits
 ```
 
-### 39 X
+### 39
 
 Which of the following represents the correct relation of alerts to incidents?
 
@@ -492,7 +490,7 @@ Otherwise, the new incoming alert will create a new incident.
 https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Prevent-Administrator-Guide/Investigate-Incidents
 ```
 
-### 40 X
+### 40
 
 Which of the following protection modules is checked first in the Cortex XDR Windows agent malware protection flow?
 
@@ -609,7 +607,7 @@ You can star security events in which two ways? (Choose two.)
 
 **```Correct Answer: B D```**
 
-### 50 X
+### 50
 
 Where would you go to add an exception to exclude a specific file hash from examination by the Malware profile for a Windows endpoint?
 
@@ -671,7 +669,7 @@ When creating a scheduled report which is not an option?
 
 **```Correct Answer: B```**
 
-### 55 X
+### 55
 
 Which statement regarding scripts in Cortex XDR is true?
 
@@ -696,7 +694,7 @@ What is the function of WildFire for Cortex XDR?
 
 **```Correct Answer: C```**
 
-### 57 X
+### 57
 
 A Linux endpoint with a Cortex XDR Pro per Endpoint license and Enhanced Endpoint Data enabled has reported malicious activity, resulting in the creation of a file that you wish to delete. Which action could you take to delete the file?
 
@@ -735,7 +733,7 @@ Which statement best describes how Behavioral Threat Protection (BTP) works?
 
 **```Correct Answer: D```**
 
-### 60 X
+### 60
 
 Which of the following paths will successfully activate Remediation Suggestions?
 
@@ -793,7 +791,7 @@ What is an example of an attack vector for ransomware?
 
 **```Correct Answer: B```**
 
-### 65 X
+### 65
 
 What should you do to automatically convert leads into alerts after investigating a lead?
 
@@ -855,7 +853,7 @@ Which of the following represents a common sequence of cyber attack tactics?
 
 **```Correct Answer: D```**
 
-### 70 X
+### 70
 
 Which Exploit Protection Module (EPM) can be used to prevent attacks based on OS function?
 
@@ -934,7 +932,7 @@ In the Cortex XDR console, from which two pages are you able to manually perform
 
 **```Correct Answer: A```** C
 
-### 77 X
+### 77
 
 Which version of python is used in live terminal?
 
