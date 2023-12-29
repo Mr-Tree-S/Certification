@@ -1,11 +1,8 @@
 # PCDRA
 
-## Study Approach
+## Refer
 
-1. Read PCDRA Study Guide
-2. Check RUSH
-3. Refer
-   > <https://www.examtopics.com/exams/palo-alto-networks/pcdra/view/>
+> <https://www.examtopics.com/exams/palo-alto-networks/pcdra/view/>
 
 ---
 
