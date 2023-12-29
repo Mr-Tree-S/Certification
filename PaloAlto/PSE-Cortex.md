@@ -98,7 +98,7 @@ Which two items are stitched to the Cortex XDR causality chain? (Choose two.)
 
 **```Correct Answer: B D```**
 
-### 9 X
+### 9
 
 A customer wants the main Cortex XSOAR server installed in one site and wants to integrate with three other technologies in a second site
 
@@ -108,6 +108,8 @@ What communications are required between the two sites if the customer wants to 
 - b. All connectivity is initiated from the Cortex XSOAR server on the first site via a managed cloud proxy
 - c. Dedicated site-to-site virtual private network (VPN) is required for the Cortex XSOAR server at the first site to initiate a connection to the Cortex XSOAR engine at the second site
 - d. The Cortex XSOAR engine at the first site must be able to initiate a connection to the Cortex XSOAR server at the second site
+
+**```Correct Answer: D```**
 
 ### 10
 
@@ -179,7 +181,7 @@ Cortex XDR external data ingestion processes ingest data from which sources?
 
 **```Correct Answer: B```**
 
-### 16 X
+### 16
 
 Which process is the causality chain does the Cortex XDR agent identify as triggering an event sequence?
 
@@ -199,7 +201,8 @@ Causality group owner (因果关系组的所有者)：
 但是，此选项并不明确指出这个“所有者”是事件链的起点。它更像是描述了这个进程在事件组中的中心地位，但不一定是第一个触发的。
 在某些情况下，知道因果关系组的所有者可以帮助分析人员确定哪个进程是最关键的，但这并不等同于知道哪个进程首先触发了警报。
 
-从描述来看，Chain’s alert initiator 更可能是 Cortex XDR agent 识别的触发事件序列的进程，因为它明确指出了该进程是警报的起始点。而 Causality group owner 描述的是一个进程在事件组中的重要性或中心地位，但没有明确说明它是触发事件的起点。
+从描述来看，Chain’s alert initiator 更可能是 Cortex XDR agent 识别的触发事件序列的进程，因为它明确指出了该进程是警报的起始点。
+而 Causality group owner 描述的是一个进程在事件组中的重要性或中心地位，但没有明确说明它是触发事件的起点。
 ```
 
 ### 17
@@ -327,7 +330,7 @@ Which Cortex XDR agent capability prevents loading malicious files from USB-conn
 
 **```Correct Answer: A```**
 
-### 28 X
+### 28
 
 Which task setting allows context output to a specific key?
 
@@ -336,7 +339,9 @@ Which task setting allows context output to a specific key?
 - c. Stop on errors
 - d. tags
 
-### 29 X
+**```Correct Answer: B```**
+
+### 29
 
 Which two methods does the Cortex XDR agent use to identify malware during a scheduled scan? (Choose two)
 
@@ -412,7 +417,7 @@ Which statement applies to the malware protection flow in Cortex XDR Prevent?
 
 **```Correct Answer: D```**
 
-### 35 X
+### 35
 
 Which action allows Cortex XSOAR to access Docker in an air-gapped environment where the Docker page was manually installed after the Cortex XSOAR installation?
 
@@ -428,10 +433,11 @@ Which action allows Cortex XSOAR to access Docker in an air-gapped environment w
 - d. 创建一个“Cortex XSOAR”或“demisto”组，并将“docker”用户添加到这个组中
 这个选项建议我们创建一个以Cortex XSOAR或demisto命名的用户组，然后将docker用户添加到这个新创建的组中。这在逻辑上是没有意义的，因为Docker daemon通常作为root用户运行，并不需要被添加到任何特定的用户组中。此外，这种方式并不提供Cortex XSOAR访问Docker的权限。
 
-简而言之，c和d的主要区别在于我们为哪个用户和哪个组授予访问权限。正确的做法是确保运行Cortex XSOAR的用户能够访问Docker，而这可以通过将其添加到"docker"组来实现。这就是为什么选项c是正确的。
+简而言之，c和d的主要区别在于我们为哪个用户和哪个组授予访问权限。
+正确的做法是确保运行Cortex XSOAR的用户能够访问Docker，而这可以通过将其添加到"docker"组来实现。这就是为什么选项c是正确的。
 ```
 
-### 36 X
+### 36
 
 What does the Cortex XSOAR “Saved by Dbot” widget calculate?
 
@@ -440,7 +446,9 @@ What does the Cortex XSOAR “Saved by Dbot” widget calculate?
 - c. Amount of time saved by Dbot’s machine learning (ML) capabilities
 - d. Amount saved in Dollars according to actions carried out by all users in Cortex XSOAR across all incidents
 
-### 37 X
+**```Correct Answer: D```**
+
+### 37
 
 On a multi-tenanted v6.2 Cortex XSOAR server, which path leads to the server log for “Tenant1”?
 
@@ -448,6 +456,8 @@ On a multi-tenanted v6.2 Cortex XSOAR server, which path leads to the server log
 - b. /var/log/demisto/Tenant1/server.log
 - c. /var/log/demisto/acc_Tenant1/server.log
 - d. /var/lib/demisto/server.log
+
+**```Correct Answer: B```**
 
 ### 38
 
@@ -493,7 +503,7 @@ Which method is used for third-party network data consumption?
 
 **```Correct Answer: C```**
 
-### 42 X
+### 42
 
 Which two playbook functionalities allow looping through a group of tasks during playbook execution? (Choose two)
 
@@ -501,6 +511,8 @@ Which two playbook functionalities allow looping through a group of tasks during
 - b. Playbook functions
 - c. CommonPolling Playbooks
 - d. Playbook tasks
+
+**```Correct Answer: A C```**
 
 ### 44
 
