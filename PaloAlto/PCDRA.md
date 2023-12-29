@@ -84,7 +84,7 @@ What are two purposes of “Respond to Malicious Causality Chains” in a Cortex
 - C. Automatically terminate the threads involved in malicious activity.
 - D. Automatically block the IP addresses involved in malicious traffic.
 
-```A D```
+**```Correct Answer: A D```**
 
 #### 5
 
