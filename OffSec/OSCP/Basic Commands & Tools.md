@@ -1,4 +1,4 @@
-# OSCP
+# Basic Commands & Tools
 
 ## Parallels & Kali
 
