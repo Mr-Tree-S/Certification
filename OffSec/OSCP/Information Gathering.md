@@ -19,4 +19,3 @@ NS1.MEGACORPONE.COM has address 51.79.37.18
 ## google hacking
 
 <https://www.exploit-db.com/google-hacking-database>
-

