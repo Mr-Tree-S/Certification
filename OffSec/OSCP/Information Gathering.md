@@ -3,19 +3,32 @@
 
 <https://www.megacorpone.com/>
 
-## whois
+## Passive
 
-```shell
-╰─❯ whois megacorpone.com
-```
+### OSINT
 
-## host
+<https://osintframework.com/>
 
-```shell
-╰─❯ host NS1.MEGACORPONE.COM
-NS1.MEGACORPONE.COM has address 51.79.37.18
-```
-
-## google hacking
+### google hacking
 
 <https://www.exploit-db.com/google-hacking-database>
+
+### netcraft
+
+<https://www.netcraft.com/>
+
+### search engine
+
+- shodan
+- fofa
+- censys
+
+### security headers
+
+<https://securityheaders.com/>
+
+### ssl labs
+
+<https://www.ssllabs.com/ssltest/>
+
+## Active
