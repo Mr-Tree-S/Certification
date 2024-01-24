@@ -31,4 +31,17 @@
 
 <https://www.ssllabs.com/ssltest/>
 
+### maltego
+
+maltego is a tool for open source intelligence.
+
 ## Active
+
+### DNS
+
+#### Zone Transfer
+
+```bash
+host -l megacorpone.com ns2.megacorpone.com
+dig axfr @ns2.megacorpone.com megacorpone.com
+```
