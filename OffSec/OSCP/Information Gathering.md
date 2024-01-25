@@ -21,7 +21,6 @@
 
 - shodan
 - fofa
-- censys
 
 ### security headers
 
@@ -44,4 +43,30 @@ maltego is a tool for open source intelligence.
 ```bash
 host -l megacorpone.com ns2.megacorpone.com
 dig axfr @ns2.megacorpone.com megacorpone.com
+```
+
+#### dnsrecon
+
+```bash
+dnsrecon -d megacorpone.com -t axfr
+```
+
+#### dnsenum
+
+```bash
+dnsenum zonetransfer.me
+dnsenum megacorpone.com
+```
+
+### port scanning
+
+#### nmap
+
+```bash
+nmap -sn 192.168.18.0/24
+nmap -p- 192.168.18.1
+nmap -p21,80 -sV -A 192.168.18.1
+nmap -p445 --script=smb-os-discovery 192.168.18.1
+nmap --script=dns-zone-transfer -p 53 ns2.megacorpone.com
+nmap -v -p139,445 --script=smb-vuln-ms08-067.nse 192.168.18.1
 ```
