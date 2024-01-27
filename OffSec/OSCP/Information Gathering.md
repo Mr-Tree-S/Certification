@@ -70,3 +70,7 @@ nmap -p445 --script=smb-os-discovery 192.168.18.1
 nmap --script=dns-zone-transfer -p 53 ns2.megacorpone.com
 nmap -v -p139,445 --script=smb-vuln-ms08-067.nse 192.168.18.1
 ```
+
+## search exploit
+
+<https://www.exploit-db.com/>
