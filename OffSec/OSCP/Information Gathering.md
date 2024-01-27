@@ -74,3 +74,17 @@ nmap -v -p139,445 --script=smb-vuln-ms08-067.nse 192.168.18.1
 ## search exploit
 
 <https://www.exploit-db.com/>
+
+### searchsploit
+
+```bash
+searchsploit syncbreeze
+searchsploit -m 49104
+```
+
+### metasploit
+
+```bash
+search syncbreeze
+use exploit/windows/http/syncbreeze_enterprise_get_bof
+```
