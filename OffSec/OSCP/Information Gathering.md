@@ -88,3 +88,22 @@ searchsploit -m 49104
 search syncbreeze
 use exploit/windows/http/syncbreeze_enterprise_get_bof
 ```
+
+## modify exploit
+
+### generial
+
+- protocol
+- route
+- path
+- authentication
+- request method
+- signed certificate
+
+### specific
+
+- url
+- username
+- password
+- response
+- ip & port
