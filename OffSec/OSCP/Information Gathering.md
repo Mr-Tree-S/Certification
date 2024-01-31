@@ -34,8 +34,6 @@
 
 maltego is a tool for open source intelligence.
 
-## Active
-
 ### DNS
 
 #### Zone Transfer
@@ -58,23 +56,38 @@ dnsenum zonetransfer.me
 dnsenum megacorpone.com
 ```
 
+## Active Scanning
+
 ### port scanning
 
 #### nmap
 
 ```bash
-nmap -sn 192.168.18.0/24
-nmap -p- 192.168.18.1
-nmap -p21,80 -sV -A 192.168.18.1
-nmap -p445 --script=smb-os-discovery 192.168.18.1
-nmap --script=dns-zone-transfer -p 53 ns2.megacorpone.com
-nmap -v -p139,445 --script=smb-vuln-ms08-067.nse 192.168.18.1
-nmap -sV -sC -p- -oA ./nmap 172.16.33.35
+nmap -sn 172.16.33.0/24
+
+nmap -p- 172.16.33.1
+nmap -p21,80 -sV -A 172.16.33.1
+
+nmap -p445 --script=smb-os-discovery 172.16.33.1
+nmap -v -p139,445 --script=smb-vuln-ms08-067.nse 172.16.33.1
+
+nmap -sV -sC -A -p- -o ./nmap/sr 172.16.33.9
+
+```
+
+### directory brute force
+
+#### gobuster
+
+```bash
+gobuster dir -u http://172.16.33.9 -w /usr/share/wordlists/dirb/common.txt
 ```
 
 ## search exploit
 
 <https://www.exploit-db.com/>
+
+## Exploit
 
 ### searchsploit
 
@@ -90,21 +103,9 @@ search syncbreeze
 use exploit/windows/http/syncbreeze_enterprise_get_bof
 ```
 
-## modify exploit
+### modify exploit
 
-### generial
-
-- protocol
-- route
-- path
-- authentication
+- protocol, route, url, path, ip, port
+- username, password
 - request method
-- signed certificate
-
-### specific
-
-- url
-- username
-- password
-- response
-- ip & port
+- authentication, signed certificate
