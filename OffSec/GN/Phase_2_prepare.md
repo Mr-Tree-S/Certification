@@ -20,6 +20,7 @@
 
 ```bash
 arp-scan -l
+nmap -sn 10.1.8
 nmap -p- 10.1.8.10 --open --reason
 nmap -p21,22,80 -sV -A 10.1.8.10
 ```
