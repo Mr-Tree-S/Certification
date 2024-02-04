@@ -2,6 +2,10 @@
 
 ## Windows
 
+### reference
+
+<https://www.fuzzysecurity.com/tutorials/16.html>
+
 ### wmic
 
 ```bash

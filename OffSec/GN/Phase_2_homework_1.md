@@ -8,7 +8,11 @@
 172.16.33.25
 172.16.33.29
 
-## 172.16.33.9
+## 172.16.33.9 - BBS (CUTE): 1.0.2
+
+### reference
+
+<https://0xv1n.github.io/posts/bbscute/>
 
 ### namp
 

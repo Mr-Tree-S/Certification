@@ -3,7 +3,6 @@
 
 172.16.33.35
 172.16.33.30
-
 172.16.33.55
 172.16.33.49
 172.16.33.78
@@ -14,7 +13,7 @@
 172.16.33.108
 172.16.33.201 (AD)
 
-## 172.16.33.35
+## 172.16.33.35 - SolidState
 
 ### namp
 
@@ -63,7 +62,11 @@ cat <<< AAA > /opt/tmp.py
 
 https://
 
-## 172.16.33.30 - Funbox2
+## 172.16.33.30 - FUNBOX: ROOKIE
+
+### reference
+
+<https://infosecwriteups.com/funbox-2-walkthrough-vulnhub-b1933209acf3>
 
 ### namp
 
