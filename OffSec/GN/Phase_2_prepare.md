@@ -15,17 +15,16 @@
 
 ## 172.16.33.35 - SolidState
 
-### namp
+### host discovery
 
 ```bash
-arp-scan -l
-nmap -sn 10.1.8
-nmap -p- 10.1.8.10 --open --reason
-nmap -p21,22,80 -sV -A 10.1.8.10
+nmap -sn 172.16.33.0/24
 ```
 
+### port scanning
+
 ```bash
-nmap -sV -sC -p- -oA ./nmap 172.16.33.35
+nmap -p- -A 172.16.33.35
 ```
 
 ### searchsploit

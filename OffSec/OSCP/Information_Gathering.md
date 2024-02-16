@@ -62,17 +62,11 @@ dnsenum megacorpone.com
 
 #### nmap
 
+使用 -A 参数后，通常可以不再需要 -sC 和 -sV 参数，因为 -A 参数已经包含了服务版本检测和脚本扫描的功能。 -A 参数会启用操作系统检测、版本检测、脚本扫描和traceroute等一系列功能。
+
 ```bash
 nmap -sn 172.16.33.0/24
-
-nmap -p- 172.16.33.1
-nmap -p21,80 -sV -A 172.16.33.1
-
-nmap -p445 --script=smb-os-discovery 172.16.33.1
-nmap -v -p139,445 --script=smb-vuln-ms08-067.nse 172.16.33.1
-
-nmap -sV -sC -A -p- -o ./nmap/sr 172.16.33.9
-
+nmap -p- -A 172.16.33.35
 ```
 
 ### directory brute force
