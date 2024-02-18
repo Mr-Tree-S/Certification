@@ -56,26 +56,6 @@ dnsenum zonetransfer.me
 dnsenum megacorpone.com
 ```
 
-## Active Scanning
-
-### port scanning
-
-#### nmap
-
-使用 -A 参数后，通常可以不再需要 -sC 和 -sV 参数，因为 -A 参数已经包含了服务版本检测和脚本扫描的功能。 -A 参数会启用操作系统检测、版本检测、脚本扫描和traceroute等一系列功能。
-
-```bash
-nmap -sn 172.16.33.0/24
-nmap -p- -A 172.16.33.35
-```
-
-### directory brute force
-
-#### gobuster
-
-```bash
-gobuster dir -u http://172.16.33.9 -w /usr/share/wordlists/dirb/common.txt
-```
 
 ## search exploit
 

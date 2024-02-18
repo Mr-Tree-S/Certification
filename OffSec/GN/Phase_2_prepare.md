@@ -24,10 +24,61 @@ nmap -sn 172.16.33.0/24
 ### port scanning
 
 ```bash
-nmap -p- -A 172.16.33.35
+nmap -p- -A 172.16.33.35 -o ./nmap/sr
+
+Nmap scan report for 172.16.33.35
+Host is up (0.070s latency).
+Not shown: 65529 closed tcp ports (conn-refused)
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 7.4p1 Debian 10+deb9u1 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 770084f578b9c7d354cf712e0d526d8b (RSA)
+|   256 78b83af660190691f553921d3f48ed53 (ECDSA)
+|_  256 e445e9ed074d7369435a12709dc4af76 (ED25519)
+25/tcp   open  smtp        JAMES smtpd 2.3.2
+|_smtp-commands: solidstate Hello nmap.scanme.org (gateway [172.16.33.1])
+80/tcp   open  http        Apache httpd 2.4.25 ((Debian))
+|_http-title: Home - Solid State Security
+|_http-server-header: Apache/2.4.25 (Debian)
+110/tcp  open  pop3        JAMES pop3d 2.3.2
+119/tcp  open  nntp        JAMES nntpd (posting ok)
+4555/tcp open  james-admin JAMES Remote Admin 2.3.2
+Service Info: Host: solidstate; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-### searchsploit
+### service enumeration
+
+#### ssh(22) - OpenSSH 7.4p1
+
+version > 5.x, no known vulnerabilities
+
+#### http(80) - Apache httpd 2.4.25
+
+##### manual enumeration
+
+- ```webadmin@solid-state-security.com``` could be used for DNS and subdomain discovery
+  - add ```solid-state-security.com, www.solid-state-security.com``` to /etc/hosts
+- the function of message will send a post request to about.html, HTML is always no vuln to exploit, because it is a static page
+  - ```<form method="post" action="#">```
+- robots.txt, sitemap.xml
+- admin, login
+- wappalyzer
+- view page source
+  - annotation, comment, hidden information
+  - link path, script, hidden element
+  - Copyright, author, version
+
+##### automated enumeration
+
+```bash
+dirsearch -u http://172.16.33.35
+dirsearch -u http://172.16.33.35 -w /usr/share/seclists/Discovery/Web-Content/big.txt
+dirsearch -u http://172.16.33.35 -f -e php,asp,aspx,jsp,html,txt,zip
+```
+
+#### smtp(25, 110, 119 4555) - JAMES smtpd 2.3.2
+
+#### searchsploit
 
 ```bash
 searchsploit James
