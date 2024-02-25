@@ -103,6 +103,18 @@ i686-w64-mingw32-gcc 41542.c -o 41542.exe
 
 <https://gtfobins.github.io/>
 
+### general
+
+- 发行版/内核
+- 进程
+- cron
+- 可写目录，文件 /etc/passwd
+- SUID
+- 用户主目录
+- env PATH
+- sudo -s / sudo -l
+- getcap
+
 ## Tips
 
 - linpeas

