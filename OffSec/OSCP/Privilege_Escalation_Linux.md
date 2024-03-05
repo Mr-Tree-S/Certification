@@ -8,6 +8,18 @@
 
 <https://gtfobins.github.io/>
 
+## Information Gathering
+
+```bash
+id
+hostname
+cat /etc/passwd | grep sh$
+grep -Ri pass . 2>/dev/null
+
+cat /etc/os-release
+searchsploit ubuntu 16.04 kernel
+```
+
 ## general
 
 - 发行版/内核
