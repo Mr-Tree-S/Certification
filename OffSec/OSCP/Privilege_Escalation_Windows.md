@@ -4,7 +4,7 @@
 
 <https://www.fuzzysecurity.com/tutorials/16.html>
 
-### lolbas-project.github.io
+### LOLBAS
 
 <https://lolbas-project.github.io/>
 

@@ -4,21 +4,9 @@
 
 <https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/>
 
-### gtfobins.github.io
+### GTFOBins
 
 <https://gtfobins.github.io/>
-
-## Information Gathering
-
-```bash
-id
-hostname
-cat /etc/passwd | grep sh$
-grep -Ri pass . 2>/dev/null
-
-cat /etc/os-release
-searchsploit ubuntu 16.04 kernel
-```
 
 ## general
 
@@ -31,6 +19,50 @@ searchsploit ubuntu 16.04 kernel
 - env PATH
 - sudo -s / sudo -l
 - getcap
+
+## Information Gathering
+
+```bash
+id
+hostname
+cat /etc/passwd | grep sh$
+grep -Ri pass . 2>/dev/null
+
+uname -a
+searchsploit ubuntu 16.04 kernel
+
+ps -ef
+ps aux
+
+ip a
+ip r
+ss -aptun
+
+sudo iptables -L
+
+crontab -l
+ls -al /var/log/cron
+
+find / --witeable -type f -user root -perm -u=x 2>/dev/null
+```
+
+## SUID
+
+```bash
+find / -perm -u=s -type f 2>/dev/null
+```
+
+## capability
+
+```bash
+getcap -r / 2>/dev/null
+```
+
+## sudo
+
+```bash
+sudo -l
+```
 
 ## Tips
 

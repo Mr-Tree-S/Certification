@@ -14,6 +14,8 @@ The -A option includes version detection and script scanning, making -sC and -sV
 ```bash
 nmap -sn 172.16.33.0/24
 nmap -p- -A 172.16.33.35 -o ./nmap/sr
+
+for a in $(seq 1 500 65535); do let b=$((a+499)); sleep 2; echo ---$a-$b---; sudo nmap -p $a-$b 192.168.208.211 | grep open; done
 ```
 
 ## service enumeration
