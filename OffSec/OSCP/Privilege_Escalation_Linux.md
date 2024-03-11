@@ -26,7 +26,7 @@
 id
 hostname
 cat /etc/passwd | grep sh$
-grep -Ri pass . 2>/dev/null
+grep -nri pass . 2>/dev/null
 
 uname -a
 searchsploit ubuntu 16.04 kernel
