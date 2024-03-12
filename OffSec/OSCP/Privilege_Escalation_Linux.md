@@ -8,6 +8,10 @@
 
 <https://gtfobins.github.io/>
 
+### PEASS-ng
+
+<https://github.com/carlospolop/PEASS-ng>
+
 ## general
 
 - 发行版/内核
@@ -64,6 +68,4 @@ getcap -r / 2>/dev/null
 sudo -l
 ```
 
-## Tips
 
-- linpeas

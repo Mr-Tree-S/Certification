@@ -8,6 +8,14 @@
 
 <https://lolbas-project.github.io/>
 
+### PEASS-ng
+
+<https://github.com/carlospolop/PEASS-ng>
+
+```cmd
+REG ADD HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1
+```
+
 ### Sysinterals Suite
 
 <https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite>
@@ -90,7 +98,3 @@ searchsploit USBPcap
 USBPcap 1.1.0.0 (WireShark 2.2.5) - Local Privilege Escalation      |       windows/local/41542.c
 i686-w64-mingw32-gcc 41542.c -o 41542.exe
 ```
-
-## Tips
-
-- linpeas
