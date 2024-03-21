@@ -1,4 +1,4 @@
-# Privilege_Escalation_Linux
+# Privilege Escalation Linux
 
 ## reference
 

@@ -1,4 +1,4 @@
-# Tunnel-Proxy
+# Tunnel Proxy
 
 ## Tunnel
 
