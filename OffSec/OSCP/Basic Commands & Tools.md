@@ -1,10 +1,5 @@
 # Basic Commands & Tools
 
-## Parallels & Kali
-
-Kali Linux 2023.2 ARM64
-<https://www.kali.org/tools/>
-
 ## Linux
 
 ### shell

@@ -1,61 +1,58 @@
 
-# Information Gathering
+# Information Gathering Passive
 
 <https://www.megacorpone.com/>
 
-## Passive
-
-### OSINT
+## OSINT
 
 <https://osintframework.com/>
 
-### google hacking
+## google hacking
 
 <https://www.exploit-db.com/google-hacking-database>
 
-### netcraft
+## netcraft
 
 <https://www.netcraft.com/>
 
-### search engine
+## search engine
 
 - shodan
 - fofa
 
-### security headers
+## security headers
 
 <https://securityheaders.com/>
 
-### ssl labs
+## ssl labs
 
 <https://www.ssllabs.com/ssltest/>
 
-### maltego
+## maltego
 
 maltego is a tool for open source intelligence.
 
-### DNS
+## DNS
 
-#### Zone Transfer
+### Zone Transfer
 
 ```bash
 host -l megacorpone.com ns2.megacorpone.com
 dig axfr @ns2.megacorpone.com megacorpone.com
 ```
 
-#### dnsrecon
+### dnsrecon
 
 ```bash
 dnsrecon -d megacorpone.com -t axfr
 ```
 
-#### dnsenum
+### dnsenum
 
 ```bash
 dnsenum zonetransfer.me
 dnsenum megacorpone.com
 ```
-
 
 ## search exploit
 
@@ -63,21 +60,21 @@ dnsenum megacorpone.com
 
 ## Exploit
 
-### searchsploit
+## searchsploit
 
 ```bash
 searchsploit syncbreeze
 searchsploit -m 49104
 ```
 
-### metasploit
+## metasploit
 
 ```bash
 search syncbreeze
 use exploit/windows/http/syncbreeze_enterprise_get_bof
 ```
 
-### modify exploit
+## modify exploit
 
 - protocol, route, url, path, ip, port
 - username, password

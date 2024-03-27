@@ -1,5 +1,5 @@
 
-# Information_Gathering_Active
+# Information Gathering Active
 
 ## host discovery
 
