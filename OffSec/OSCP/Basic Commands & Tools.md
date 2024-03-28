@@ -1,5 +1,18 @@
 # Basic Commands & Tools
 
+## pentest process
+
+A typical penetration test comprises the following stages:
+
+- Defining the Scope
+- Information Gathering
+- Vulnerability Detection
+- Initial Foothold
+- Privilege Escalation
+- Lateral Movement
+- Reporting/Analysis
+- Lessons Learned/Remediation
+
 ## Linux
 
 ### shell
