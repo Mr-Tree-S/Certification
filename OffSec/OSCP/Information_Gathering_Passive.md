@@ -5,34 +5,42 @@
 
 <https://www.megacorpone.com/>
 
-## OSINT
+### OSINT
 
 <https://osintframework.com/>
+
+### netcraft
+
+<https://www.netcraft.com/>
+
+### search engine
+
+- shodan
+- fofa
+
+### security headers
+
+<https://securityheaders.com/>
+
+### ssl labs
+
+<https://www.ssllabs.com/ssltest/>
+
+### maltego
+
+maltego is a tool for open source intelligence.
+
+## whois
 
 ## google hacking
 
 <https://www.exploit-db.com/google-hacking-database>
 
-## netcraft
+<https://dorksearch.com/>
 
-<https://www.netcraft.com/>
-
-## search engine
-
-- shodan
-- fofa
-
-## security headers
-
-<https://securityheaders.com/>
-
-## ssl labs
-
-<https://www.ssllabs.com/ssltest/>
-
-## maltego
-
-maltego is a tool for open source intelligence.
+```Google
+site:"twitter.com" inurl:"megacorpone.com"
+```
 
 ## DNS
 
