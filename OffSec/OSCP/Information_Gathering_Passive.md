@@ -9,30 +9,9 @@
 
 <https://osintframework.com/>
 
-### netcraft
-
-<https://www.netcraft.com/>
-
-### search engine
-
-- shodan
-- fofa
-
-### security headers
-
-<https://securityheaders.com/>
-
-### ssl labs
-
-<https://www.ssllabs.com/ssltest/>
-
-### maltego
-
-maltego is a tool for open source intelligence.
-
 ## whois
 
-## google hacking
+## Google Hacking
 
 <https://www.exploit-db.com/google-hacking-database>
 
@@ -42,51 +21,25 @@ maltego is a tool for open source intelligence.
 site:"twitter.com" inurl:"megacorpone.com"
 ```
 
-## DNS
+## Netcraft
 
-### Zone Transfer
+<https://sitereport.netcraft.com/>
+<https://searchdns.netcraft.com/>
 
-```bash
-host -l megacorpone.com ns2.megacorpone.com
-dig axfr @ns2.megacorpone.com megacorpone.com
-```
+## Open-Source Code
 
-### dnsrecon
+<https://github.com/michenriksen/gitrob>
 
-```bash
-dnsrecon -d megacorpone.com -t axfr
-```
+<https://github.com/zricethezav/gitleaks>
 
-### dnsenum
+## Search Engine
 
-```bash
-dnsenum zonetransfer.me
-dnsenum megacorpone.com
-```
+### shodan
 
-## search exploit
+### fofa
 
-<https://www.exploit-db.com/>
+## Security Headers and SSL/TLS
 
-## Exploit
+<https://securityheaders.com/>
 
-## searchsploit
-
-```bash
-searchsploit syncbreeze
-searchsploit -m 49104
-```
-
-## metasploit
-
-```bash
-search syncbreeze
-use exploit/windows/http/syncbreeze_enterprise_get_bof
-```
-
-## modify exploit
-
-- protocol, route, url, path, ip, port
-- username, password
-- request method
-- authentication, signed certificate
+<https://www.ssllabs.com/ssltest/>
