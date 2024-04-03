@@ -1,7 +1,7 @@
 
 # Information Gathering Active
 
-## host discovery
+## DNS Enumeration
 
 ```bash
 nmap -sn 172.16.33.0/24
