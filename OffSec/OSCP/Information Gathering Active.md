@@ -3,11 +3,27 @@
 
 ## DNS Enumeration
 
+### host
+
 ```bash
-nmap -sn 172.16.33.0/24
+for ip in $(cat list.txt); do host $ip.megacorpone.com; done
+
+for ip in $(seq 200 254); do host 51.222.169.$ip; done | grep -v "not found"
 ```
 
-## port scanning
+### dnsenum
+
+```bash
+dnsenum megacorpone.com
+```
+
+### nslookup
+
+```bash
+nslookup -type=TXT info.megacorptwo.com 192.168.50.151
+```
+
+## Port Scanning
 
 The -A option includes version detection and script scanning, making -sC and -sV unnecessary.
 
