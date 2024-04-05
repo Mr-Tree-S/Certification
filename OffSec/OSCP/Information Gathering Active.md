@@ -116,37 +116,4 @@ Test-NetConnection -Port 445 192.168.50.151
 1..1024 | % {echo ((New-Object Net.Sockets.TcpClient).Connect("192.168.50.151", $_)) "TCP port $_ is open"} 2>$null
 ```
 
-### directory brute force
-
-#### gobuster
-
-```bash
-gobuster dir -u http://172.16.33.9 -w /usr/share/wordlists/dirb/common.txt
-```
-
-## search exploit
-
-<https://www.exploit-db.com/>
-
-## Exploit
-
-### searchsploit
-
-```bash
-searchsploit syncbreeze
-searchsploit -m 49104
-```
-
-### metasploit
-
-```bash
-search syncbreeze
-use exploit/windows/http/syncbreeze_enterprise_get_bof
-```
-
-### modify exploit
-
-- protocol, route, url, path, ip, port
-- username, password
-- request method
-- authentication, signed certificate
+## directory brute force
