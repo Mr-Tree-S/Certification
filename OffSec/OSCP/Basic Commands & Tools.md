@@ -14,9 +14,16 @@
 
 ### OSCP Tools
 
-seclists, Nessus，dvwa
+#### Information Gathering
+
 burpsuite, dirsearch, gobuster
+
+seclists, Nessus，dvwa
 powercat, mingw-w64, x86_64-linux-gnu-gcc, rsg
+
+#### Vulnerability Analysis
+
+wpscan
 
 ### General Tools
 
