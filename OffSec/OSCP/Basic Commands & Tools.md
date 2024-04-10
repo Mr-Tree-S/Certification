@@ -1,5 +1,38 @@
 # Basic Commands & Tools
 
+## Kali
+
+### hosts
+
+```bash
+# OSCP VPN
+51.79.170.192   vpn-pool1.offseclabs.com
+
+# OSCP Labs
+#192.168.225.16 offsecwp
+```
+
+### OSCP Tools
+
+seclists, Nessus，dvwa
+burpsuite, dirsearch, gobuster
+powercat, mingw-w64, x86_64-linux-gnu-gcc, rsg
+
+### General Tools
+
+tcvps
+shadowsocks
+Parallels: Lock screen time
+
+### CVE
+
+- 2021-3493(Linux-priviledge)
+- 2019-11447(CuteNews)
+
+### GN
+
+phase_2 2(172.16.33.30), homework 172.16.33.9
+
 ## pentest process
 
 A typical penetration test comprises the following stages:
@@ -25,14 +58,6 @@ sudo chown root root_auto_schedule.sh
 sudo chmod o+w root_auto_schedule.sh
 sudo find / -user root -type f -perm -o=w -iname '*.sh' 2>/dev/null
 ```
-
-#### cat | cut | uniq | sort
-
-```shell
-cat access_log.txt | cut -d " " -f 1 | uniq -c | sort -run
-```
-
----
 
 #### ss
 
@@ -148,7 +173,6 @@ sc start wsearch
 ---
 
 ## Tools (reverse shell)
-
 
 ### powercat
 
