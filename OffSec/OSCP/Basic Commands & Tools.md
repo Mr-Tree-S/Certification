@@ -23,7 +23,9 @@ powercat, mingw-w64, x86_64-linux-gnu-gcc, rsg
 
 #### Vulnerability Analysis
 
-wpscan
+##### wpscan
+
+wp.php
 
 ### General Tools
 
