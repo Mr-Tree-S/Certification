@@ -35,6 +35,14 @@ Parallels: Lock screen time
 
 ### CVE
 
+#### Directory Traversal
+
+- CVE-2021-43798 （Grafana 8.3.0 - Directory Traversal and Arbitrary File Read）
+- CVE-2021-41773 （Apache HTTP Server 2.4.49 - Path Traversal）
+- CVE-2021-42013 （Apache HTTP Server 2.4.50 - Path Traversal）
+
+#### Command Injection
+
 - 2021-3493(Linux-priviledge)
 - 2019-11447(CuteNews)
 
