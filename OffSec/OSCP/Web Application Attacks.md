@@ -199,8 +199,7 @@ cat fileup.pub > authorized_keys
 
 ` = %60
 
-`" " ' ; | & && || $ ( ) `
-
+`" " ' ; | & && || $ ( )`
 
 <https://gabb4r.gitbook.io/oscp-notes/cheatsheet/command-injection-cheatsheet>
 

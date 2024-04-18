@@ -1,4 +1,4 @@
-# Basic Commands & Tools
+# Foundation
 
 ## Kali
 
@@ -7,21 +7,15 @@
 ```bash
 # OSCP VPN
 51.79.170.192   vpn-pool1.offseclabs.com
-
-# OSCP Labs
-#192.168.225.16 offsecwp
 ```
 
-### OSCP Tools
+### Tools
 
-#### Information Gathering
+#### information gathering
 
 burpsuite, dirsearch, gobuster
 
-seclists
-mingw-w64, x86_64-linux-gnu-gcc,
-
-#### Vulnerability Analysis
+#### vulnerability scanning
 
 Nessus，wpscan
 
@@ -29,7 +23,11 @@ Nessus，wpscan
 
 rsg
 
-### General Tools
+#### privilege escalation
+
+mingw-w64, x86_64-linux-gnu-gcc,
+
+### general
 
 tcvps
 shadowsocks
