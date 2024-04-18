@@ -121,7 +121,7 @@ Test-NetConnection -Port 445 192.168.50.151
 ### dirsearch
 
 ```bash
-dirsearch -u http://
+dirsearch -u http:// -e php,html,txt -w /usr/share/seclists/Discovery/Web-Content/common.txt
 ```
 
 ### gobuster

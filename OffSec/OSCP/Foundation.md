@@ -17,7 +17,7 @@ burpsuite, dirsearch, gobuster
 
 #### vulnerability scanning
 
-Nessus，wpscan
+Nessus，nikto, wpscan
 
 #### reverse shell
 
