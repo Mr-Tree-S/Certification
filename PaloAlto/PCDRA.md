@@ -71,7 +71,7 @@ Which built-in dashboard would be the best option for an executive, if they were
 - C. Security Admin Dashboard
 - D. Incident Management Dashboard
 
-```不多说了，选C，打开这个dashboard，在右上角```
+`C`
 
 ### 4
 
@@ -148,7 +148,7 @@ When viewing the incident directly, what is the “assigned to” field value of
 - C. Unassigned
 - D. New
 
-```不多说了，XDR上看过，是Unassigned```
+`Unassigned`
 
 ### 11
 
@@ -193,7 +193,7 @@ Which type of BIOC rule is currently available in Cortex XDR?
 - C. Network
 - D. Dropper
 
-```XDR上Discovery和Dropper都有，可能一个是后来新出的type，答案推荐D，那就选D吧```
+**```Correct Answer: D```**
 
 ### 16
 
@@ -230,20 +230,7 @@ What is the purpose of targeting software vendors in a supply-chain attack?
 - C. to access source code.
 - D. to report Zero-day vulnerabilities.
 
-```text
-针对软件供应商的供应链攻击的目的是：
-
-- A. 利用可信软件交付方法。
-供应链攻击的关键在于攻击者通过渗透可信的软件供应商来分发恶意软件或执行其他恶意活动。因为用户通常信任这些供应商提供的软件更新和补丁，所以这种攻击方式能够有效地利用这种信任来传播恶意代码。
-- B. 窃取用户的登录凭证。
-尽管窃取用户凭证可能是某些网络攻击的目标，但这并不是针对软件供应商的供应链攻击的主要目的。
-- C. 访问源代码。
-访问源代码可能是攻击者的目标之一，但在供应链攻击中，这通常是手段而不是最终目的。攻击者可能会修改源代码来植入恶意软件，但这只是为了更广泛地分发恶意代码。
-- D. 报告零日漏洞。
-报告零日漏洞通常是安全研究人员或白帽黑客的工作，而不是网络攻击者的目的。供应链攻击者通常利用漏洞而不是报告它们。
-
-因此，最准确的答案是 - A. 利用可信软件交付方法。 这是供应链攻击常见的目的，通过这种方法，攻击者能够在广大用户中有效地传播恶意软件或进行其他恶意活动。
-```
+**```Correct Answer: A```**
 
 ### 20
 
@@ -434,20 +421,7 @@ Which statement is true for Application Exploits and Kernel Exploits?
 - C. The ultimate goal of any exploit is to reach the kernel.
 - D. Application exploits leverage kernel vulnerability.
 
-```text
-在理解应用程序漏洞（Application Exploits）和内核漏洞（Kernel Exploits）时，有几个关键概念需要明确。这些概念有助于区分这两种类型的漏洞以及它们的目标和影响。让我们来分析您给出的选项：
-
-- A. 任何漏洞的最终目标都是到达应用程序。
-这个说法过于笼统。应用程序漏洞的目标可能是应用程序本身，但内核漏洞的目标是操作系统的核心部分。
-- B. 内核漏洞比应用程序漏洞更容易防止。
-通常情况下，内核漏洞更难以预防和检测，因为它们涉及到操作系统的核心部分，这些部分通常不容易接触或监控。
-- C. 任何漏洞的最终目标都是到达内核。
-对于很多高级的攻击者来说，达到内核级别的控制确实是一个主要目标，因为这样可以获得对整个系统的完全控制。
-- D. 应用程序漏洞利用内核漏洞。
-应用程序漏洞和内核漏洞是不同的。应用程序漏洞一般是指在特定应用程序中的安全漏洞，而不一定涉及或利用内核漏洞。
-
-考虑到这些信息，最准确的陈述是 - C. 任何漏洞的最终目标都是到达内核。达到内核级别的控制可以给攻击者提供对整个系统的广泛控制，这对于攻击者来说是非常有价值的。因此，虽然不是所有攻击的最终目标都是内核，但从战略角度来看，内核级别的访问权确实是许多复杂攻击的主要目标。
-```
+**```Correct Answer: C```**
 
 ### 37
 
@@ -862,20 +836,7 @@ Which Exploit Protection Module (EPM) can be used to prevent attacks based on OS
 - C. UASLR
 - D. JIT Mitigation
 
-```text
-在防御基于操作系统功能的攻击时，Exploit Protection Module (EPM) 提供了多种机制。每个模块都针对特定类型的攻击或漏洞提供保护。根据您提供的选项，我们来分析哪种 EPM 可以用来预防基于操作系统功能的攻击：
-
-- A. Memory Limit Heap Spray Check
-堆喷射（Heap Spray）是一种常见的攻击技术，攻击者试图在目标程序的堆内存中填充大量的数据。此选项可能涉及防止此类攻击，但它并不直接与操作系统功能本身相关。
-- B. DLL Security
-DLL 安全性与动态链接库（DLL）文件有关。虽然 DLL 是操作系统的一个重要组成部分，但 DLL 安全性通常指的是确保 DLL 文件的完整性和安全性，而不是直接针对基于操作系统功能的攻击。
-- C. UASLR (User Address Space Layout Randomization)
-地址空间布局随机化是一种安全技术，用于随机排列内存地址的位置，使得攻击者难以预测和利用内存中特定区域的数据。这是一种基于操作系统功能的防御机制，可以有效防止多种内存相关的攻击。
-- D. JIT Mitigation
-即时编译（JIT）缓解通常与浏览器和某些应用程序中的 JIT 编译器有关。它旨在防止利用 JIT 编译过程中的漏洞，而不是直接针对操作系统功能的攻击。
-
-在这些选项中，- C. UASLR (User Address Space Layout Randomization) 最直接地与操作系统功能相关，并提供了基于这些功能的攻击防御。UASLR 通过增加内存布局的不确定性来提高操作系统的安全性，从而阻止基于内存的攻击。
-```
+**```Correct Answer: C```**
 
 ### 72
 
@@ -1104,8 +1065,3 @@ Can you disable the ability to use the Live Terminal feature in Cortex XDR?
 - D. Yes, via the Cortex XDR console or with an installation switch.
 
 **```Correct Answer: D```**
-
-## 考前忠告
-
-1. 太绝对的词大概率错误的，例如**must/only**
-2. 选跟题干**关键词**相关度高的

