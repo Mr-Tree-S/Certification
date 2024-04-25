@@ -41,9 +41,10 @@ Parallels: Lock screen time
 
 #### Directory Traversal
 
-- CVE-2021-43798 （Grafana 8.3.0 - Directory Traversal and Arbitrary File Read）
-- CVE-2021-41773 （Apache HTTP Server 2.4.49 - Path Traversal）
-- CVE-2021-42013 （Apache HTTP Server 2.4.50 - Path Traversal）
+- CVE-2021-43798    Grafana 8.3.0 - Directory Traversal and Arbitrary File Read
+- CVE-2021-41773    Apache HTTP Server 2.4.49 - Path Traversal
+- CVE-2021-42013    Apache HTTP Server 2.4.50 - Path Traversal
+- CVE-2021-24762    Perfect Survey < 1.5.2 - Unauthenticated SQL Injection
 
 #### Command Injection
 
@@ -158,10 +159,6 @@ bitsadmin /Setminretrydelay backdoor 1
 bitsadmin /resume backdoor
 ```
 
-### certutil
-
-certutil 是Windows命令行工具，用于管理证书服务和证书相关的操作。证书服务是Windows操作系统中的一个角色，用于创建和管理证书，以及为用户和计算机分发证书。
-
 ### schtasks
 
 schtasks 是Windows操作系统中用来创建、删除、查询、更改和运行系统任务计划的命令行工具。任务计划可以用来定时运行脚本或程序，执行系统维护任务，或者自动执行重复的作业。
@@ -190,5 +187,3 @@ sc start wsearch
 ### SysinternalsSuit
 
 - PsInfo64.exe /accepteula
-
----

