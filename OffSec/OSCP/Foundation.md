@@ -34,6 +34,8 @@ mingw-w64, x86_64-linux-gnu-gcc,
 ### general
 
 oletools
+wsgidav
+swaks
 
 tcvps
 shadowsocks
