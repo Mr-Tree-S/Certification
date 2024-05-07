@@ -33,6 +33,8 @@ mingw-w64, x86_64-linux-gnu-gcc,
 
 ### general
 
+oletools
+
 tcvps
 shadowsocks
 Parallels: Lock screen time
