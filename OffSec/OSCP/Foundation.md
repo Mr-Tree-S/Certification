@@ -41,20 +41,6 @@ tcvps
 shadowsocks
 Parallels: Lock screen time
 
-### CVE
-
-#### Directory Traversal
-
-- CVE-2021-43798    Grafana 8.3.0 - Directory Traversal and Arbitrary File Read
-- CVE-2021-41773    Apache HTTP Server 2.4.49 - Path Traversal
-- CVE-2021-42013    Apache HTTP Server 2.4.50 - Path Traversal
-- CVE-2021-24762    Perfect Survey < 1.5.2 - Unauthenticated SQL Injection
-
-#### Command Injection
-
-- 2021-3493(Linux-priviledge)
-- 2019-11447(CuteNews)
-
 ### GN
 
 phase_2 2(172.16.33.30), homework 172.16.33.9
@@ -74,9 +60,8 @@ A typical penetration test comprises the following stages:
 
 ## Linux
 
-### shell
 
-#### find
+### find
 
 ```shell
 touch root_auto_schedule.sh
@@ -85,10 +70,16 @@ sudo chmod o+w root_auto_schedule.sh
 sudo find / -user root -type f -perm -o=w -iname '*.sh' 2>/dev/null
 ```
 
-#### ss
+### ss
 
 ```shell
 ss -aptu
+```
+
+### curl
+
+```shell
+curl http://192.168.176.11/project/uploads/users/254478-backdoor.php --data-urlencode "cmd=which nc"
 ```
 
 ## Windows

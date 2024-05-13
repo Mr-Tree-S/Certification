@@ -49,8 +49,9 @@ sudo nmap -p 80 --script http-title.nse  192.168.224.0/24 -oN http-title-N.txt
 
 ```bash
 sudo nmap -sS 192.168.50.149
-nmap -sT -sU 192.168.50.149
+sudo nmap -sT -sU 192.168.50.149
 
+sudo nmap -p- 192.168.208.211
 for a in $(seq 1 500 65535); do let b=$((a+499)); sleep 2; echo ---$a-$b---; sudo nmap -p $a-$b 192.168.208.211 | grep open; done
 ```
 
@@ -59,13 +60,15 @@ for a in $(seq 1 500 65535); do let b=$((a+499)); sleep 2; echo ---$a-$b---; sud
 The -A option includes version detection and script scanning, making -sC and -sV unnecessary.
 
 ```bash
-nmap -p- -A 172.16.33.35 -oN nmap.txt
+sudo nmap -p- -A 172.16.33.35 -oN nmap.txt
 ```
 
 ##### SMB
 
 ```bash
 sudo nmap -p 445 192.168.239.0/24 -oG smb.txt
+
+sudo smbclient -L 192.168.174.10 -N
 
 cat smb.txt | grep open | cut -d " " -f 2 | while read ip; do enum4linux "$ip"; done
 ```
