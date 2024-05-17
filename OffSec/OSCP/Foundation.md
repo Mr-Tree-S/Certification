@@ -41,10 +41,6 @@ tcvps
 shadowsocks
 Parallels: Lock screen time
 
-### GN
-
-phase_2 2(172.16.33.30), homework 172.16.33.9
-
 ## pentest process
 
 A typical penetration test comprises the following stages:
@@ -59,7 +55,6 @@ A typical penetration test comprises the following stages:
 - Lessons Learned/Remediation
 
 ## Linux
-
 
 ### find
 
