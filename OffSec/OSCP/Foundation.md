@@ -31,7 +31,11 @@ rsg
 
 mingw-w64, x86_64-linux-gnu-gcc,
 
-### general
+#### AV_Evasion
+
+wine, shellter, hoaxshell
+
+#### general
 
 oletools
 wsgidav
