@@ -47,6 +47,14 @@ hydra 10.1.0.2 http-post-form "/login.php:username=^USER^&password=^PASS^:Invali
 
 ## offline
 
+### hashid
+
+```bash
+hashid '$2y$10$XrrpX8RD6IFvBwtzPuTlcOqJ8kO2px2xsh17f60GZsBKLeszsQTBC'
+hashid -m hash.txt
+hashid -j
+```
+
 ### john
 
 ```bash
