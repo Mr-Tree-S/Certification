@@ -19,7 +19,7 @@ chisel 是一个用于创建隧道的工具，它可以通过HTTP代理或者SOC
 #### rdp
 
 ```bash
-xfreerdp /u:username /p:password /v:172.16.8.137 /w:1024 /h:768 /drive:home,/home/kali/Downloads
+xfreerdp /u:offsec /p:lab /v:192.168.159.61 /drive:home,/home/parallels/Downloads
 ```
 
 ### upload

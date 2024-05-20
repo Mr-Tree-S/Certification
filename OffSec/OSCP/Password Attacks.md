@@ -68,6 +68,10 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 hashcat --help | grep -ni ntlm
 hashcat -m 1000 hash.txt /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule
 
+hashcat --help | grep -i "KeePass"
+hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/rockyou-30000.rule --force
+hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/rockyou-30000.rule --force --show
+
 hashcat --help | grep -ni \$p 
 hashcat -m 400 wp.hash ~/OSCP/rockyou.txt 
 ```
