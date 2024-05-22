@@ -75,3 +75,5 @@ hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/has
 hashcat --help | grep -ni \$p 
 hashcat -m 400 wp.hash ~/OSCP/rockyou.txt 
 ```
+
+## NTLM
