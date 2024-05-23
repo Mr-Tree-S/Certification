@@ -2,6 +2,12 @@
 
 ## Tunnel
 
+### chisel
+
+<https://github.com/jpillora/chisel>
+
+chisel 是一个用于创建隧道的工具，它可以通过HTTP代理或者SOCKS5代理来创建隧道。
+
 ### ssh
 
 #### local port forwarding
@@ -30,6 +36,11 @@ ssh -N -D 127.0.0.1:9090 yuanfh@172.16.8.136
 ssh -N -R 9090 kali@172.16.8.144
 ```
 
+#### plink
+
+```cmd
+
+
 ## Proxy
 
 ### proxychains
@@ -39,16 +50,6 @@ nmap -sT means TCP connect scan, you shuld add -sT when you use proxychains to s
 ```bash
 proxychains nmap -sT -vv 192.168.18.1
 ```
-
-```bash
-
-### chisel
-
-<https://github.com/jpillora/chisel>
-
-chisel 是一个用于创建隧道的工具，它可以通过HTTP代理或者SOCKS5代理来创建隧道。
-
-### dnsmasq
 
 ## Transfer
 

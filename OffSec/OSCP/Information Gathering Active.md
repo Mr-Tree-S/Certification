@@ -84,6 +84,12 @@ vrfy root
 
 ##### SNMP
 
+- GN
+
+```bash
+snmpwalk -c public 192.168.228.149 -v2c NET-SNMP-EXTEND-MIB::nsExtendObjects
+```
+
 | OID | Description |
 | --- | ----------- |
 | 1.3.6.1.2.1.25.1.6.0   | System Processes |
