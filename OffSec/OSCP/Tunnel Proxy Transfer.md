@@ -6,40 +6,65 @@
 
 <https://github.com/jpillora/chisel>
 
-chisel 是一个用于创建隧道的工具，它可以通过HTTP代理或者SOCKS5代理来创建隧道。
+```bash
+# server
+./chisel server -p 4444 --reverse
+
+# client
+./chisel client 172.16.8.144:4444 R:socks
+```
 
 ### ssh
 
-#### local port forwarding
+#### ssh forwarding
 
 ```bash
+#local port forwarding
 sudo ssh -N -L 127.0.0.1:8080:192.168.18.1:80 kali@127.0.0.1
 ```
 
-#### remote port forwarding
-
 ```bash
+# remote port forwarding
+
 sudo ssh -N -R 172.16.8.144:7070:192.168.18.1:80 kali@172.16.8.144
 ```
 
 #### ssh tunnel
 
-##### dynamic ssh tunnel
-
 ```bash
+# forward ssh tunnel
 ssh -N -D 127.0.0.1:9090 yuanfh@172.16.8.136
 ```
 
-##### reverse ssh tunnel
-
 ```bash
+# reverse ssh tunnel
 ssh -N -R 9090 kali@172.16.8.144
 ```
 
-#### plink
+### plink
+
+kali ip:172.16.8.144
+intranet http server ip:192.168.18.1:80
+so this is a reverse tunnel.
 
 ```cmd
+scp kali@172.16.8.144/usr/share/windows-binaries/plink.exe .
+plink -ssh -l kali -pw kali -R 172.16.8.144:5050:192.168.18.1:80 172.16.8.144
+```
 
+request to kali:5050 will be forwarded to intranet http server.
+
+### netsh
+
+local windows ip:172.16.8.152
+intranet http server ip:192.168.18.1:80
+so this is a forward tunnel.
+
+```cmd
+netsh interface portproxy add v4tov4 listenport=8080 listenaddress=172.16.8.152 connectport=80 connectaddress=192.168.18.1
+```
+
+request to windows:8080 will be forwarded to intranet http server.
 
 ## Proxy
 
