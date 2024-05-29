@@ -4,16 +4,19 @@
 
 |Name|count|
 |---|-----|
+|OffSec Experienced Penetration Tester (OSEP)|2338|
 |OffSec Web Expert (OSWE)|3136|
+|OffSec Exploit Developer (OSED)|834|
+|---|-----|
 |OffSec Certified Expert 3 (OSCE3)|475|
 |OffSec Exploitation Expert (OSEE)|134|
-|OffSec Wireless Professional (OSWP)|3037|
-|OffSec Web Assessor (OSWA)|612|
+|---|-----|
 |OffSec Certified Professional (OSCP)|16953|
-|OffSec Exploit Developer (OSED)|834|
-|OffSec Defense Analyst (OSDA)|457|
+|OffSec Web Assessor (OSWA)|612|
 |OffSec macOS Researcher (OSMR)|114|
-|OffSec Experienced Penetration Tester (OSEP)|2338|
+|---|-----|
+|OffSec Wireless Professional (OSWP)|3037|
+|OffSec Defense Analyst (OSDA)|457|
 
 ## command
 
