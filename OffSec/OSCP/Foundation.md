@@ -173,3 +173,16 @@ sc start wsearch
 ### SysinternalsSuit
 
 - PsInfo64.exe /accepteula
+
+## 要点总结
+
+- 全端口扫描（分段循环）
+- 扫指纹（应用、版本、title、SNMP）
+- 突破边界（GithubEXP、钓鱼邮件、PDF文件、CMS、枚举字典）
+- WEB漏洞（SQLi、LFI、上传、RCE、遍历）
+- 密码爆破（同密码、+1、用户名字典、密码喷射）
+- 穿透内网（回连端口、正向侦听、busybox）
+- 上传文件（FullTTY、WEB、SSH、SMB-“net use \\kali\share /user:kali kali”）
+- 本地提权（PEAS、本地服务、pspy、分开编译、土豆）
+- 域内移动（SPN、mimikatz、WMIC、WinRM、RDP）
+- 本地信息收集（地点、应用名称）
