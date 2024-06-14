@@ -1,63 +1,5 @@
 # Foundation
 
-## Kali
-
-### hosts
-
-```bash
-# OSCP VPN
-51.79.170.192   vpn-pool1.offseclabs.com
-```
-
-### Tools
-
-#### information gathering
-
-burpsuite, dirsearch, gobuster
-
-#### vulnerability scanning
-
-Nessus，nikto, wpscan
-
-#### exploit framework
-
-BeEF, metasploit
-
-#### reverse shell
-
-rsg
-
-#### privilege escalation
-
-mingw-w64, x86_64-linux-gnu-gcc,
-
-#### AV_Evasion
-
-wine, shellter, hoaxshell
-
-#### general
-
-oletools
-wsgidav
-swaks
-
-tcvps
-shadowsocks
-Parallels: Lock screen time
-
-## pentest process
-
-A typical penetration test comprises the following stages:
-
-- Defining the Scope
-- Information Gathering
-- Vulnerability Detection
-- Initial Foothold
-- Privilege Escalation
-- Lateral Movement
-- Reporting/Analysis
-- Lessons Learned/Remediation
-
 ## Linux
 
 ### find
@@ -173,6 +115,19 @@ sc start wsearch
 ### SysinternalsSuit
 
 - PsInfo64.exe /accepteula
+
+## pentest process
+
+A typical penetration test comprises the following stages:
+
+- Defining the Scope
+- Information Gathering
+- Vulnerability Detection
+- Initial Foothold
+- Privilege Escalation
+- Lateral Movement
+- Reporting/Analysis
+- Lessons Learned/Remediation
 
 ## 要点总结
 
