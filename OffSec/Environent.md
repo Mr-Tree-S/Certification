@@ -6,6 +6,8 @@
 
 ### server
 
+/usr/local/etc/v2ray
+
 ```bash
 sudo firewall-cmd --zone=public --add-port=1194/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=1194/udp --permanent
