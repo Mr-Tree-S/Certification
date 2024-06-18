@@ -6,14 +6,13 @@
 
 ### server
 
-/usr/local/etc/v2ray
-
 ```bash
 sudo firewall-cmd --zone=public --add-port=1194/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=1194/udp --permanent
 sudo firewall-cmd --reload
 sudo firewall-cmd --list-ports
 
+/usr/local/etc/v2ray
 systemctl start v2ray@offsec_server
 ```
 
@@ -188,6 +187,7 @@ systemctl start v2ray@offsec_client
 ### openvpn
 
 ```bash
+/etc/openvpn/client
 #remote vpn-pool1.offseclabs.com 1194 udp
 remote 127.0.0.1 1194
 
