@@ -93,6 +93,12 @@ tcp_connect_time_out 500
 
 ### download
 
+### python
+
+```bash
+python3 -m http.server 80
+```
+
 #### rdp
 
 ```bash

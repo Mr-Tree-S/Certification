@@ -4,7 +4,29 @@
 
 shellter是一个动态的反向TCP/UDP连接的shellcode注入工具，它可以将shellcode注入到Windows可执行文件中，使其免杀。
 
-但是要windows环境，还要intel x86/x64架构芯片。所以M1芯片的Mac是不行的。
+但是要windows环境，还要x86/x64架构芯片。所以Mac的Arm架构芯片是不行的。
+
+### ftp.py
+
+```python
+from ftplib import FTP
+ftp_server = "192.168.247.53"
+username = "anonymous"
+password = ""
+file_path = "./putty.exe"
+destination_path = "putty32.exe"
+
+ftp = FTP(ftp_server)
+ftp.login(username, password)
+
+ftp.set_pasv(False)
+ftp.sendcmd("TYPE I")
+
+with open(file_path, "rb") as f:
+    ftp.storbinary("STOR " + destination_path, f)
+
+ftp.quit()
+```
 
 ## hoaxshell
 
