@@ -10,20 +10,21 @@ shellter是一个动态的反向TCP/UDP连接的shellcode注入工具，它可�
 
 ```python
 from ftplib import FTP
+
 ftp_server = "192.168.247.53"
 username = "anonymous"
 password = ""
 file_path = "./putty.exe"
-destination_path = "putty32.exe"
+destination = "putty32.exe"
 
 ftp = FTP(ftp_server)
-ftp.login(username, password)
+ftp.login(user=username, passwd=password)
 
 ftp.set_pasv(False)
 ftp.sendcmd("TYPE I")
 
-with open(file_path, "rb") as f:
-    ftp.storbinary("STOR " + destination_path, f)
+with open(file_path, "rb") as file:
+    ftp.storbinary(f'STOR {destination}', file)
 
 ftp.quit()
 ```
